@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react'
 import './App.css';
+import Tasks from './components/Tasks'
+import TopBar from './components/TopBar'
+import NewTask from './components/NewTask';
 
 function App() {
+  const [taskList, setTaskList] = useState([
+    {
+      id: 1,
+      title: 'Task 1',
+      description: 'Description 1',
+      date: '1 Jan'
+    },
+    {
+      id: 2,
+      title: 'Task 2',
+      description: 'Description 2',
+      date: '2 Jan'
+    },
+    {
+      id: 3,
+      title: 'Task 3',
+      description: 'Description 3',
+      date: '3 Jan'
+    }
+  ])
+  const [showNewTask, setShowNewTask] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TopBar buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
+      {showNewTask && <NewTask /> }
+      <Tasks taskList={ taskList } />
     </div>
   );
 }
