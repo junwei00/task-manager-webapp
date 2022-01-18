@@ -1,0 +1,277 @@
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20220118095221)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20220118095221)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20220118095221)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTasks (20220118095221)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "tasks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "deadline" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220118095221"]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-01-18 09:56:50.499127"], ["updated_at", "2022-01-18 09:56:50.499127"]]
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Task 1"], ["description", "Task Description 1"], ["deadline", nil], ["created_at", "2022-01-18 09:57:06.571145"], ["updated_at", "2022-01-18 09:57:06.571145"]]
+  [1m[36mTRANSACTION (16.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Task 2"], ["description", "Task Description 2"], ["deadline", nil], ["created_at", "2022-01-18 09:57:06.590977"], ["updated_at", "2022-01-18 09:57:06.590977"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Task 3"], ["description", "Task Description 3"], ["deadline", nil], ["created_at", "2022-01-18 09:57:06.602052"], ["updated_at", "2022-01-18 09:57:06.602052"]]
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Task 4"], ["description", "Task Description 4"], ["deadline", nil], ["created_at", "2022-01-18 09:57:06.613311"], ["updated_at", "2022-01-18 09:57:06.613311"]]
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks"[0m
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:08:10 +0800
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 15917)
+
+
+  
+NameError (undefined local variable or method `tdlists' for #<TasksController:0x00000000008c00>):
+  
+app/controllers/tasks_controller.rb:4:in `index'
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:08:57 +0800
+Processing by TasksController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 1.3ms | Allocations: 7003)
+
+
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:13:34 +0800
+Processing by TasksController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 1.1ms | Allocations: 3434)
+
+
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:13:38 +0800
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	title: 'New Test Task',
+	description: 'Test task description'
+}
+Processing by TasksController#create as */*
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 109)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/tasks_controller.rb:8:in `create'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:14:04 +0800
+Error occurred while parsing request parameters.
+Contents:
+
+{
+	'title': 'New Test Task',
+	'description': 'Test task description'
+}
+Processing by TasksController#create as */*
+Completed 400 Bad Request in 1ms (Allocations: 119)
+
+
+  
+ActionDispatch::Http::Parameters::ParseError (Error occurred while parsing request parameters):
+  
+app/controllers/tasks_controller.rb:8:in `create'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:15:06 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"New Test Task", "description"=>"Test task description", "task"=>{"title"=>"New Test Task", "description"=>"Test task description"}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.8ms | Allocations: 1163)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tasks_controller.rb:8:in `create'
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:17:50 +0800
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 15.3ms | ActiveRecord: 1.6ms | Allocations: 19151)
+
+
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:17:52 +0800
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"New Test Task", "description"=>"Test task description", "task"=>{"title"=>"New Test Task", "description"=>"Test task description"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 141)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tasks_controller.rb:8:in `create'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:21:18 +0800
+  
+NoMethodError (undefined method `protect_from_forgery' for TasksController:Class):
+  
+app/controllers/tasks_controller.rb:2:in `<class:TasksController>'
+app/controllers/tasks_controller.rb:1:in `<main>'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:21:18 +0800
+  
+NoMethodError (undefined method `protect_from_forgery' for TasksController:Class):
+  
+app/controllers/tasks_controller.rb:2:in `<class:TasksController>'
+app/controllers/tasks_controller.rb:1:in `<main>'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:21:19 +0800
+  
+NoMethodError (undefined method `protect_from_forgery' for TasksController:Class):
+  
+app/controllers/tasks_controller.rb:2:in `<class:TasksController>'
+app/controllers/tasks_controller.rb:1:in `<main>'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:21:38 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"New Test Task", "description"=>"Test task description", "task"=>{"title"=>"New Test Task", "description"=>"Test task description"}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.1ms | Allocations: 1143)
+
+
+  
+ActiveModel::ForbiddenAttributesError (ActiveModel::ForbiddenAttributesError):
+  
+app/controllers/tasks_controller.rb:8:in `create'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:22:58 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"New Test Task", "description"=>"Test task description", "task"=>{"title"=>"New Test Task", "description"=>"Test task description"}}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms | Allocations: 4261)
+
+
+  
+NoMethodError (undefined method `body' for #<Task:0x00007fc0c13c5dc8>):
+  
+app/controllers/tasks_controller.rb:8:in `create'
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:24:44 +0800
+Processing by TasksController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.6ms | Allocations: 3421)
+
+
+Started PATCH "/api/tasks/1" for ::1 at 2022-01-18 18:25:58 +0800
+Processing by TasksController#update as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 400 Bad Request in 9ms (ActiveRecord: 1.3ms | Allocations: 3472)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: task):
+  
+app/controllers/tasks_controller.rb:27:in `task_params'
+app/controllers/tasks_controller.rb:14:in `update'
+Started PATCH "/api/tasks/1" for ::1 at 2022-01-18 18:28:07 +0800
+Processing by TasksController#update as */*
+  Parameters: {"description"=>"edited description 1", "id"=>"1", "task"=>{"description"=>"edited description 1"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms | Allocations: 3619)
+
+
+  
+NoMethodError (undefined method `body' for #<Task:0x00007fc0c0b21fa0>):
+  
+app/controllers/tasks_controller.rb:14:in `update'
+Started POST "/api/tasks" for ::1 at 2022-01-18 18:31:49 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TasksController#create as */*
+  Parameters: {"title"=>"New Test Task", "description"=>"Test task description", "task"=>{"title"=>"New Test Task", "description"=>"Test task description"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.5ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "New Test Task"], ["description", "Test task description"], ["deadline", nil], ["created_at", "2022-01-18 10:31:49.725873"], ["updated_at", "2022-01-18 10:31:49.725873"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (8.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 9.9ms | Allocations: 3019)
+
+
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:31:52 +0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1253)
+
+
+Started PATCH "/api/tasks/5" for ::1 at 2022-01-18 18:32:52 +0800
+Processing by TasksController#update as */*
+  Parameters: {"description"=>"edited description", "id"=>"5", "task"=>{"description"=>"edited description"}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "edited description"], ["updated_at", "2022-01-18 10:32:52.726856"], ["id", 5]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (13.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 14.4ms | Allocations: 2368)
+
+
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:32:54 +0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 1226)
+
+
+Started DELETE "/api/tasks/5" for ::1 at 2022-01-18 18:33:12 +0800
+Processing by TasksController#destroy as */*
+  Parameters: {"id"=>"5"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTask Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+Completed 204 No Content in 11ms (ActiveRecord: 7.0ms | Allocations: 1770)
+
+
+Started GET "/api/tasks" for ::1 at 2022-01-18 18:33:15 +0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1112)
+
+
