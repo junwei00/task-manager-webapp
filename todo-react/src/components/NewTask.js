@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 
-function NewTask() {
+function NewTask({ setShowNewTask, getTasks }) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [deadline, setDeadline] = useState('')
 
-  const handleSubmit = (e) => {
+  function handleSubmit (e) {
     postTask()
   }
 
@@ -21,12 +21,14 @@ function NewTask() {
         setTitle('')
         setDescription('')
         setDeadline(new Date())
+        setShowNewTask(false)
+        getTasks()
       })
       .catch((error) => console.log(error))
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="NewTask" onSubmit={handleSubmit}>
       <div>
         <input
           type='text'

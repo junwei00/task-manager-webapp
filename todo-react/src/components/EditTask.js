@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-function EditTask({ task, updater }) {
+function EditTask({ task, getTasks, setShowEditTask }) {
   const [title, setTitle] = useState(task.title)
   const [description, setDescription] = useState(task.description)
   const [deadline, setDeadline] = useState(task.deadline)
@@ -18,13 +18,14 @@ function EditTask({ task, updater }) {
         deadline: deadline
       })
       .then((res) => {
-        updater()
+        getTasks()
+        setShowEditTask(false)
       })
       .catch((error) => console.log(error))
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="EditTask" onSubmit={handleSubmit}>
       <div>
         <input
           type='text'

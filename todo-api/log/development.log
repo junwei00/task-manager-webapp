@@ -8896,3 +8896,845 @@ Processing by TasksController#index as HTML
 Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1235)
 
 
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 08:59:55 +0800
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 12ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 20326)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 09:00:15 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"Another Task From React", "description"=>"Sample description", "deadline"=>"2022-01-27", "task"=>{"title"=>"Another Task From React", "description"=>"Sample description", "deadline"=>"2022-01-27"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Another Task From React"], ["description", "Sample description"], ["deadline", "2022-01-27"], ["created_at", "2022-01-19 01:00:15.480814"], ["updated_at", "2022-01-19 01:00:15.480814"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 2042)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:00:15 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1378)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 09:00:21 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Task From React", "description"=>"Sample description", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Task From React", "description"=>"Sample description", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.1ms | Allocations: 2773)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:00:21 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 09:00:24 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Task From React", "description"=>"Sample description", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Task From React", "description"=>"Sample description", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 786)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:00:24 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1380)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:00:24 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1362)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:01:21 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:04:25 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1362)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 09:04:32 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Task From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Task From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Sample description (edited)"], ["updated_at", "2022-01-19 01:04:32.206099"], ["id", 20]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 2271)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:04:32 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 09:04:38 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Task From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Task From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 790)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:04:38 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1365)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:04:38 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:05:00 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 09:05:02 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"", "description"=>"", "deadline"=>"", "task"=>{"title"=>"", "description"=>"", "deadline"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 09:07:26 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"Hello", "description"=>"Description", "deadline"=>"", "task"=>{"title"=>"Hello", "description"=>"Description", "deadline"=>""}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "Description"], ["deadline", nil], ["created_at", "2022-01-19 01:07:26.063659"], ["updated_at", "2022-01-19 01:07:26.063659"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 1786)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:07:32 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1477)
+
+
+Started DELETE "/api/tasks/21" for 127.0.0.1 at 2022-01-19 09:08:04 +0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 21]]
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 3.0ms | Allocations: 1768)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:08:05 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1363)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 09:08:15 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"Hello", "description"=>"Description", "deadline"=>"2022-01-20", "task"=>{"title"=>"Hello", "description"=>"Description", "deadline"=>"2022-01-20"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.2ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Hello"], ["description", "Description"], ["deadline", "2022-01-20"], ["created_at", "2022-01-19 01:08:15.419615"], ["updated_at", "2022-01-19 01:08:15.419615"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 1797)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:08:15 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1490)
+
+
+Started DELETE "/api/tasks/22" for 127.0.0.1 at 2022-01-19 09:08:17 +0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 22]]
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 3.0ms | Allocations: 1750)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:08:18 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1363)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 09:08:26 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Edit From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Edit From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.1ms)[0m  [1m[33mUPDATE "tasks" SET "title" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["title", "Another Edit From React"], ["updated_at", "2022-01-19 01:08:26.180697"], ["id", 20]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 2245)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:08:26 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:08:26 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:21:52 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1837)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:22:30 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:22:31 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:22:53 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:26:25 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:26:52 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:26:53 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:28:25 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:49:32 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1837)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 09:49:33 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:44:45 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1838)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:44:46 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:46:30 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:48:15 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:48:16 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:48:58 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:49:05 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:52:37 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:53:52 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:54:02 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:56:55 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:57:52 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 21:58:12 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:03:23 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:11:29 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.9ms | ActiveRecord: 0.3ms | Allocations: 1837)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:11:37 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:11:45 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:11:47 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:14:03 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:14:14 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:14:28 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:16:05 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1363)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:22:14 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 1837)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 22:24:23 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"", "description"=>"", "deadline"=>"", "task"=>{"title"=>"", "description"=>"", "deadline"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 337)
+
+
+Started PUT "/api/tasks/15" for 127.0.0.1 at 2022-01-19 22:25:31 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Hello From React! (Edit)", "description"=>"This task was edited (twice)", "deadline"=>"2022-01-31", "id"=>"15", "task"=>{"title"=>"Hello From React! (Edit)", "description"=>"This task was edited (twice)", "deadline"=>"2022-01-31"}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "This task was edited (twice)"], ["updated_at", "2022-01-19 14:25:31.306310"], ["id", 15]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 3.2ms | Allocations: 2266)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:25:31 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 22:25:53 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"A new task made after the css change", "description"=>"Description", "deadline"=>"2022-01-21", "task"=>{"title"=>"A new task made after the css change", "description"=>"Description", "deadline"=>"2022-01-21"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "A new task made after the css change"], ["description", "Description"], ["deadline", "2022-01-21"], ["created_at", "2022-01-19 14:25:53.427046"], ["updated_at", "2022-01-19 14:25:53.427046"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 1795)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:25:58 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started PUT "/api/tasks/23" for 127.0.0.1 at 2022-01-19 22:26:31 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"A new task made after the css change", "description"=>"Description (edited)", "deadline"=>"2022-01-21", "id"=>"23", "task"=>{"title"=>"A new task made after the css change", "description"=>"Description (edited)", "deadline"=>"2022-01-21"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.1ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Description (edited)"], ["updated_at", "2022-01-19 14:26:31.956047"], ["id", 23]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 2246)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:26:32 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 1492)
+
+
+Started DELETE "/api/tasks/23" for 127.0.0.1 at 2022-01-19 22:28:33 +0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"23"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 23], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 23]]
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 3.3ms | Allocations: 1750)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:28:33 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:33:44 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:33:54 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:34:03 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:34:11 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:35:37 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 22:36:00 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"", "description"=>"", "deadline"=>"", "task"=>{"title"=>"", "description"=>"", "deadline"=>""}}
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 22:36:05 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Edit From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Edit From React", "description"=>"Sample description (edited)", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 788)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:36:05 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1367)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 22:40:11 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Edit From React", "description"=>"Sample description (edited 2)", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Edit From React", "description"=>"Sample description (edited 2)", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.2ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Sample description (edited 2)"], ["updated_at", "2022-01-19 14:40:11.347707"], ["id", 20]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 2249)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:40:11 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started PUT "/api/tasks/20" for 127.0.0.1 at 2022-01-19 22:40:14 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"Another Edit From React", "description"=>"Sample description (edited 2)", "deadline"=>"2022-01-27", "id"=>"20", "task"=>{"title"=>"Another Edit From React", "description"=>"Sample description (edited 2)", "deadline"=>"2022-01-27"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms | Allocations: 786)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:40:14 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1366)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:45:37 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1364)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 22:46:03 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"Third Task From React", "description"=>"I need to finish this quick", "deadline"=>"2022-01-28", "task"=>{"title"=>"Third Task From React", "description"=>"I need to finish this quick", "deadline"=>"2022-01-28"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Third Task From React"], ["description", "I need to finish this quick"], ["deadline", "2022-01-28"], ["created_at", "2022-01-19 14:46:03.164834"], ["updated_at", "2022-01-19 14:46:03.164834"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 1795)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:46:06 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:46:52 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:46:53 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:46:54 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:46:54 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1492)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:47:29 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 1.4ms | Allocations: 1493)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:48:38 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1493)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:48:51 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:48:51 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1492)
+
+
+Started DELETE "/api/tasks/24" for 127.0.0.1 at 2022-01-19 22:48:53 +0800
+Processing by TasksController#destroy as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:19:in `destroy'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTask Destroy (0.1ms)[0m  [1m[31mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:20:in `destroy'
+Completed 204 No Content in 5ms (ActiveRecord: 2.8ms | Allocations: 1750)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:48:54 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms | Allocations: 1364)
+
+
+Started POST "/api/tasks" for 127.0.0.1 at 2022-01-19 22:49:04 +0800
+Processing by TasksController#create as HTML
+  Parameters: {"title"=>"React Test", "description"=>"D", "deadline"=>"2022-01-28", "task"=>{"title"=>"React Test", "description"=>"D", "deadline"=>"2022-01-28"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTask Create (0.1ms)[0m  [1m[32mINSERT INTO "tasks" ("title", "description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "React Test"], ["description", "D"], ["deadline", "2022-01-28"], ["created_at", "2022-01-19 14:49:04.809869"], ["updated_at", "2022-01-19 14:49:04.809869"]]
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:8:in `create'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 3.0ms | Allocations: 1794)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:49:05 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 1491)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:49:12 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1491)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:49:18 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms | Allocations: 1491)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:49:18 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1491)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:51:22 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1491)
+
+
+Started PUT "/api/tasks/25" for 127.0.0.1 at 2022-01-19 22:52:09 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"title"=>"React Test", "description"=>"Edit", "deadline"=>"2022-01-28", "id"=>"25", "task"=>{"title"=>"React Test", "description"=>"Edit", "deadline"=>"2022-01-28"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:13:in `update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTask Update (0.1ms)[0m  [1m[33mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "Edit"], ["updated_at", "2022-01-19 14:52:09.187320"], ["id", 25]]
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:14:in `update'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 2243)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:52:09 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 1491)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-19 22:52:14 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1491)
+
+

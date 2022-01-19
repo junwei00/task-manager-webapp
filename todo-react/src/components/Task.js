@@ -2,31 +2,31 @@ import axios from "axios";
 import { useState } from "react";
 import EditTask from "./EditTask";
 
-function Task({ task, updater }) {
+function Task({ task, getTasks }) {
   const [showEditTask, setShowEditTask] = useState(false)
 
   function deleteTask() {
     axios
       .delete(`/api/tasks/${task.id}`)
       .then((res) => {
-        updater()
+        getTasks()
       })
       .catch((error) => console.log(error))
   }
 
   return (
-    <div>
+    <div className="Task">
       <h3>{task.title} </h3>
-      <div>{task.description}</div>
-        <div>
-          <button onClick = {() => setShowEditTask(!showEditTask)}>
-          {showEditTask ? 'Close' : 'Edit'}
-          </button>
-          <button onClick = {deleteTask}>
-          Delete
-          </button>
+      <p>{task.description}</p>
+      <div className="Buttons">
+        <button onClick = {() => setShowEditTask(!showEditTask)}>
+        {showEditTask ? 'Close' : 'Edit'}
+        </button>
+        <button onClick = {deleteTask}>
+        Delete
+        </button>
       </div>
-      {showEditTask && <EditTask task={task} updater={updater}/>}
+      {showEditTask && <EditTask task={task} getTasks={getTasks} setShowEditTask={setShowEditTask} />}
     </div>
   );
 }

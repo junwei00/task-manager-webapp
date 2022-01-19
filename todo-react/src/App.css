@@ -1,3 +1,6 @@
+* {
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +38,113 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Main {
+  margin-left: 200px;
+}
+
+.Topbar {
+  display: flex;
+  height: 50px;
+}
+
+.Topbar * {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.Topbar input {
+  margin-left: 5px;
+  flex: 1;
+  font-size: 20px;
+}
+
+.Topbar select {
+  flex: 0.3;
+  font-size: 20px;
+}
+
+.Topbar button {
+  flex: 0.3;
+  font-size: 20px;
+}
+
+.Sidebar {
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  z-index: 1;
+  background-color: lightgray;
+}
+
+.Sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  color:black;
+}
+
+.Tasks {
+  padding-left: 0px;
+}
+
+.Tasks h2 {
+  font-size: 33px;
+  margin-left: 10px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.Task {
+  margin: 5px 5px 5px 5px;
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+}
+
+.Task h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 25px;
+  text-align: left;
+}
+
+.Task p {
+  text-align: left;
+  font-size: 20px;
+}
+
+.Task .Buttons {
+  text-align: right;
+}
+
+.Task button {
+  font-size: 20px;
+  margin: 0px 5px 0px 5px;
+}
+
+.NewTask {
+  margin-top: 10px;
+}
+
+.NewTask *{
+  font-size: 20px;
+  width: 500px;
+  margin-inline: auto;
+  align-self: center;
+}
+
+.EditTask {
+  margin-top: 10px;
+}
+
+.EditTask * {
+  font-size: 20px;
+  width: 500px;
+  margin-inline: auto;
+  align-self: center;
 }
