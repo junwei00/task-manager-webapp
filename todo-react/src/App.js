@@ -55,12 +55,13 @@ function App() {
   useEffect(() => {
     getTasks()
   }, [])
-
+  
   return (
     <div className="App">
       <Sidebar />
       <div className='Main'>
-        <Topbar handleSearch={handleSearch} handleSort={handleSort} buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
+        <Topbar handleSearch={handleSearch} handleSort={handleSort} 
+          buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
         {showNewTask && <NewTask setShowNewTask={setShowNewTask} getTasks={getTasks}/> }
         <Tasks taskList={filteredTaskList} getTasks={getTasks}/>
       </div>

@@ -110,6 +110,14 @@
   border: 1px solid black;
 }
 
+.Task-flagged {
+  border: 3px solid red;
+}
+
+.Task-done {
+  border: 3px solid green;
+}
+
 .Task h3 {
   margin-top: 0px;
   margin-bottom: 0px;
