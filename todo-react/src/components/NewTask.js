@@ -39,6 +39,7 @@ function NewTask({ setShowNewTask, getTasks }) {
       </div>
       <div>
         <input
+          className="Description"
           type='text'
           placeholder='Description'
           value={description}
@@ -53,7 +54,7 @@ function NewTask({ setShowNewTask, getTasks }) {
           onChange={(e) => setDeadline(e.target.value)}
         />
       </div>
-      <input type='submit' value='Save Task'/>
+      <input className="Submit" type='submit' value='Save Task'/>
     </form>
   );
 }

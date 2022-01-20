@@ -16,7 +16,8 @@ function Task({ task, getTasks }) {
 
   return (
     <div className="Task">
-      <h3>{task.title} </h3>
+      <h3 className="Title">{task.title} </h3>
+      <h4 className="Deadline">Deadline: {task.deadline}</h4>
       <p>{task.description}</p>
       <div className="Buttons">
         <button onClick = {() => setShowEditTask(!showEditTask)}>

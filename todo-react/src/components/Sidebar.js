@@ -5,6 +5,7 @@ function Sidebar() {
       <a href="#" className="sidebar-button">Category 1</a>
       <a href="#" className="sidebar-button">Category 2</a>
       <a href="#" className="sidebar-button">Category 3</a>
+      <a href="#" className="sidebar-button">Done</a>
     </div>
   );
 }

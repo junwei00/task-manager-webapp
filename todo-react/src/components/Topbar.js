@@ -1,16 +1,17 @@
 import NewTask from "./NewTask";
 
-function Topbar({ buttonState, onClickNewTask }) {
+function Topbar({ handleSearch, handleSort, buttonState, onClickNewTask }) {
   return (
     <div className='Topbar'>
       <input 
+        onChange={e => handleSearch(e)}
         id="Searchbar"
         type='text'
-        placeholder='Search tasks'/>
-      <select>
+        placeholder='Search...'/>
+      <select onChange={e => handleSort(e)}>
+        <option>Created</option>
         <option>Deadline</option>
-        <option>Created at</option>
-        <option>Alphabetical</option>
+        <option>Alphanumeric</option>
       </select>
       <button onClick={onClickNewTask}>
         {buttonState ? 'Close' : 'New Task'}    

@@ -89,6 +89,10 @@
   color:black;
 }
 
+.Sidebar a:hover {
+  color: grey
+}
+
 .Tasks {
   padding-left: 0px;
 }
@@ -113,6 +117,14 @@
   text-align: left;
 }
 
+.Task h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  text-align: left;
+  color: gray;
+}
+
 .Task p {
   text-align: left;
   font-size: 20px;
@@ -125,26 +137,22 @@
 .Task button {
   font-size: 20px;
   margin: 0px 5px 0px 5px;
+  width: 80px;
+  height: 40px;
 }
 
-.NewTask {
-  margin-top: 10px;
-}
-
-.NewTask *{
-  font-size: 20px;
-  width: 500px;
+.NewTask, .EditTask {
+  margin-top: 20px;
+  width: 60%;
   margin-inline: auto;
-  align-self: center;
 }
 
-.EditTask {
-  margin-top: 10px;
-}
-
-.EditTask * {
+.NewTask *, .EditTask * {
   font-size: 20px;
-  width: 500px;
-  margin-inline: auto;
-  align-self: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.NewTask .Description, .EditTask .Description{
+  height: 100px;
 }
