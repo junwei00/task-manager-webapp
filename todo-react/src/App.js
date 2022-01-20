@@ -63,7 +63,7 @@ function App() {
         <Topbar handleSearch={handleSearch} handleSort={handleSort} 
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
         {showNewTask && <NewTask setShowNewTask={setShowNewTask} getTasks={getTasks}/> }
-        <Tasks taskList={filteredTaskList} getTasks={getTasks}/>
+        <Tasks setTaskList={setTaskList} setFilteredTaskList={setFilteredTaskList} filteredTaskList={filteredTaskList}/>
       </div>
     </div>
   );

@@ -2,12 +2,13 @@ import { useState, useEffect } from 'react'
 import axios from "axios"
 import Task from './Task'
 
-function Tasks({ taskList, getTasks}) {
+function Tasks({ setTaskList, setFilteredTaskList, filteredTaskList}) {
   return (
     <div className="Tasks">
       <h2>My Tasks</h2>
-      {taskList.map((task) => (
-        <Task key={task.id} task={task} getTasks={getTasks} />
+      {filteredTaskList.map((task, index) => (
+        <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
+          filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}/>
       ))}
     </div>
   );

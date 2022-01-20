@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-function EditTask({ task, getTasks, setShowEditTask }) {
+function EditTask({ task, refreshTask, setShowEditTask }) {
   const [title, setTitle] = useState(task.title)
   const [description, setDescription] = useState(task.description)
   const [deadline, setDeadline] = useState(task.deadline)
@@ -18,7 +18,7 @@ function EditTask({ task, getTasks, setShowEditTask }) {
         deadline: deadline
       })
       .then((res) => {
-        getTasks()
+        refreshTask()
         setShowEditTask(false)
       })
       .catch((error) => console.log(error))

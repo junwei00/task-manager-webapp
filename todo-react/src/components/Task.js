@@ -2,14 +2,35 @@ import axios from "axios";
 import { useState } from "react";
 import EditTask from "./EditTask";
 
-function Task({ task, getTasks }) {
+function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList}) {
   const [showEditTask, setShowEditTask] = useState(false)
+
+  function refreshTask() {
+    axios
+      .get(`/api/tasks/${task.id}`)
+      .then((res) => {
+        let newTaskList = [...filteredTaskList]
+        newTaskList[index] = res.data
+        setFilteredTaskList(newTaskList)
+        refreshTasks()
+      })
+      .catch((error) => console.log(error))
+  }
+
+  function refreshTasks() {
+    axios
+      .get(`/api/tasks`)
+      .then((res) => {
+        setTaskList(res.data)
+      })
+      .catch((error) => console.log(error))
+  }
 
   function deleteTask() {
     axios
       .delete(`/api/tasks/${task.id}`)
       .then((res) => {
-        getTasks()
+        refreshTask()
       })
       .catch((error) => console.log(error))
   }
@@ -21,7 +42,7 @@ function Task({ task, getTasks }) {
     axios
       .put(`/api/tasks/${task.id}`, data)
       .then((res) => {
-        getTasks()
+        refreshTask()
       })
       .catch((error) => console.log(error))
   }
@@ -33,7 +54,7 @@ function Task({ task, getTasks }) {
     axios
       .put(`/api/tasks/${task.id}`, data)
       .then((res) => {
-        getTasks()
+        refreshTask()
       })
       .catch((error) => console.log(error))    
   }
@@ -65,7 +86,8 @@ function Task({ task, getTasks }) {
         Delete
         </button>
       </div>
-      {showEditTask && <EditTask task={task} getTasks={getTasks} setShowEditTask={setShowEditTask} />}
+      {showEditTask && <EditTask task={task} index={index} refreshTask={() => refreshTask()} 
+        setShowEditTask={setShowEditTask} />}
     </div>
   );
 }
