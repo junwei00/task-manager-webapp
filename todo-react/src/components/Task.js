@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import EditTask from "./EditTask";
 
-function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList}) {
+function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList, tagList}) {
   const [showEditTask, setShowEditTask] = useState(false)
 
   function refreshTask() {
@@ -67,9 +67,17 @@ function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList}
     className += " Task-done"
   }
   
+  let tagString=""
+  task.tags.map((tag) => {
+    tagString += "#" + tag.name + " "
+  })
+
   return (
     <div className={className}>
-      <h3 className="Title">{task.title} </h3>
+      <div className="Header">
+         <h3 className="Title">{task.title} </h3>
+         <h3 className="Tags">{tagString}</h3>
+      </div>
       <h4 className="Deadline">Deadline: {task.deadline}</h4>
       <p>{task.description}</p>
       <div className="Buttons">

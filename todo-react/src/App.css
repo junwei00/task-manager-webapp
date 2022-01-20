@@ -118,11 +118,24 @@
   border: 3px solid green;
 }
 
+.Task .Header {
+  display: flex;
+}
+
+.Task .Tags {
+  display: inline;
+  color: grey;
+  margin-left: 20px;
+}
+
+.Task .Title {
+  text-align: left;
+}
+
 .Task h3 {
   margin-top: 0px;
   margin-bottom: 0px;
   font-size: 25px;
-  text-align: left;
 }
 
 .Task h4 {

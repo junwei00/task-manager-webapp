@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_01_20_095601) do
+ActiveRecord::Schema.define(version: 2022_01_20_130659) do
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "tags_tasks", id: false, force: :cascade do |t|
+    t.integer "tag_id", null: false
+    t.integer "task_id", null: false
+  end
 
   create_table "tasks", force: :cascade do |t|
     t.string "title"

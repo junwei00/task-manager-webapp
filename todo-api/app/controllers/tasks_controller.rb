@@ -1,12 +1,12 @@
 class TasksController < ApplicationController
   def index
     tasks = Task.order("created_at DESC")
-    render json: tasks
+    render :json => tasks.to_json(:include => [:tags])
   end
 
   def show
     task = Task.find(params[:id])
-    render json: task
+    render :json => task.to_json(:include => [:tags])
   end
 
   def create

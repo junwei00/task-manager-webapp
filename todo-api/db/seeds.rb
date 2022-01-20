@@ -23,3 +23,18 @@ tasks = Task.create([
     description: 'Task Description 4'
   }
 ])
+
+tags = Tag.create([
+  {
+    name: 'Work'
+  },
+  {
+    name: 'Education'
+  },
+  {
+    name: 'Hobbies'
+  },
+  {
+    name: 'Social'
+  }
+])

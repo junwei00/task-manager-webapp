@@ -1,11 +1,12 @@
-function Sidebar() {
+function Sidebar({ tagList }) {
+
   return (
     <div className='Sidebar'>
-      <a href="#" className="sidebar-button">All</a>
-      <a href="#" className="sidebar-button">Category 1</a>
-      <a href="#" className="sidebar-button">Category 2</a>
-      <a href="#" className="sidebar-button">Category 3</a>
-      <a href="#" className="sidebar-button">Done</a>
+      {tagList.map((tag, index) => {
+        return <a href="#" key={index}>
+          {tag.name}
+        </a>
+      })}
     </div>
   );
 }

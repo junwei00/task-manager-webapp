@@ -10,6 +10,7 @@ function App() {
   const [showNewTask, setShowNewTask] = useState(false)
   const [taskList, setTaskList] = useState([])
   const [filteredTaskList, setFilteredTaskList] = useState([])
+  const [tagList, setTagList] = useState([])
 
   function getTasks() {
     axios
@@ -17,6 +18,15 @@ function App() {
       .then((res) => {
         setTaskList(res.data)
         setFilteredTaskList(res.data)
+      })
+      .catch((error) => console.log(error))
+  }
+
+  function getTags() {
+    axios
+      .get("/api/tags")
+      .then((res) => {
+        setTagList(res.data)
       })
       .catch((error) => console.log(error))
   }
@@ -54,16 +64,18 @@ function App() {
 
   useEffect(() => {
     getTasks()
+    getTags()
   }, [])
   
   return (
     <div className="App">
-      <Sidebar />
+      <Sidebar tagList={tagList}/>
       <div className='Main'>
         <Topbar handleSearch={handleSearch} handleSort={handleSort} 
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
         {showNewTask && <NewTask setShowNewTask={setShowNewTask} getTasks={getTasks}/> }
-        <Tasks setTaskList={setTaskList} setFilteredTaskList={setFilteredTaskList} filteredTaskList={filteredTaskList}/>
+        <Tasks setTaskList={setTaskList} setFilteredTaskList={setFilteredTaskList} 
+          tagList={tagList} filteredTaskList={filteredTaskList}/>
       </div>
     </div>
   );
