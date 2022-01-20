@@ -12,12 +12,12 @@ function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList}
         let newTaskList = [...filteredTaskList]
         newTaskList[index] = res.data
         setFilteredTaskList(newTaskList)
-        refreshTasks()
+        refreshTasklist()
       })
       .catch((error) => console.log(error))
   }
 
-  function refreshTasks() {
+  function refreshTasklist() {
     axios
       .get(`/api/tasks`)
       .then((res) => {

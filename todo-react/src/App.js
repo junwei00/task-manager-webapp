@@ -35,8 +35,8 @@ function App() {
     let result = [...filteredTaskList]
     if (sortBy == "Created") {
       result.sort((task1, task2) => 
-        {if (task1.created_at > task2.created_at) return 1
-         if (task2.created_at > task1.created_at) return -1
+        {if (task1.created_at > task2.created_at) return -1
+         if (task2.created_at > task1.created_at) return 1
          return 0})
     } else if (sortBy == "Deadline") {
       result.sort((task1, task2) => 

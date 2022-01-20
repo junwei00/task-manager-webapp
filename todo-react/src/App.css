@@ -105,9 +105,9 @@
 }
 
 .Task {
-  margin: 5px 5px 5px 5px;
+  margin: 7px 7px 7px 7px;
   padding: 10px 10px 10px 10px;
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 .Task-flagged {
