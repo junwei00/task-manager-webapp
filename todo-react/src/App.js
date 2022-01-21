@@ -66,6 +66,11 @@ function App() {
         {if (task1.created_at > task2.created_at) return -1
          if (task2.created_at > task1.created_at) return 1
          return 0})
+    } else if (sortBy == "Edited") {
+      result.sort((task1, task2) => 
+        {if (task1.updated_at > task2.updated_at) return -1
+         if (task2.updated_at > task1.updated_at) return 1
+         return 0})
     } else if (sortBy == "Deadline") {
       result.sort((task1, task2) => 
         {if (task1.deadline > task2.deadline) return 1

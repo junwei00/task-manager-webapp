@@ -1,4 +1,9 @@
-* {
+:root{
+  --color1: #EAE7DC;
+  --color2: #D8C3A5;
+  --color3: #8E8D8A;
+  --color4: #E98074;
+  --color5: #E85A4F;
 }
 
 .App {
@@ -100,7 +105,12 @@
 
 .Sidebar .Tag {
   display: inline-flex;
+  padding-inline: 4px;
   width: 100%;
+}
+
+.Sidebar .Tag-selected {
+  background-color: var(--color3)
 }
 
 .Sidebar .Cross {
@@ -113,7 +123,8 @@
   align-self: flex-end;
   margin-left: auto;
   margin-right: 5px;
-  color: lightslategrey;
+  color: grey;
+  cursor: text;
 }
 
 .Sidebar .NewEdit {
@@ -133,7 +144,6 @@
   height: 25px;
   width: 80%;
   font-size: 25px;
-
 }
 
 .Tasks {
@@ -183,7 +193,7 @@
 
 .Task .AddTagToTask:hover {
   margin-left: 10px;
-  color: lightgrey;
+  color: lightskyblue;
 }
 
 .Task .TaskTagList {

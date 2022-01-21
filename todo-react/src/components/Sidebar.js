@@ -6,6 +6,7 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)
   const [newtagName, setNewtagName] = useState("")
+  const [currentTag, setCurrentTag] = useState(0)
 
   function Newtag() {
     if (showEdittag && !showNewtag) {
@@ -58,7 +59,10 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
   return (
     <div className='Sidebar'>
       <div className="Tag">
-        <a onClick={() => setFilteredTaskList(taskList)}>
+        <a onClick={() => {
+          setFilteredTaskList(taskList)
+          setCurrentTag(-1)
+          }}>
           All
         </a>
         <a className='Number'>
@@ -66,9 +70,16 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
         </a>
       </div>
       {tagList.map((tag, index) => {
+        let className="Tag"
+        if (tag.id == currentTag) {
+          className+=" Tag-selected"
+        }
         return (
-        <div key={index} className="Tag">
-          <a onClick={() => {filterTasksByTag(tag.id)}}>
+        <div key={index} className={className}>
+          <a onClick={() => {
+            filterTasksByTag(tag.id)
+            setCurrentTag(tag.id)
+            }}>
             {tag.name}
           </a>
           {showEdittag 

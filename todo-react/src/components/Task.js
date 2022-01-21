@@ -89,14 +89,14 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaskList
       <h4 className="Deadline">Deadline: {task.deadline}</h4>
       <p>{task.description}</p>
       <div className="Buttons">
+        <button onClick = {toggleDoneTask}>
+          {task.status == 'done' ? 'Undo' : 'Done'}
+        </button>
         <button onClick = {toggleFlagTask}>
           {task.status == 'flagged' ? 'Unflag' : 'Flag'}
         </button>
         <button onClick = {() => setShowEditTask(!showEditTask)}>
         {showEditTask ? 'Close' : 'Edit'}
-        </button>
-        <button onClick = {toggleDoneTask}>
-          {task.status == 'done' ? 'Undo' : 'Done'}
         </button>
         <button onClick = {deleteTask}>
         Delete

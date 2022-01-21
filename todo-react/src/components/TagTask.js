@@ -13,8 +13,11 @@ function TagTask({ task, tagList, refreshTask }) {
       .catch((error) => console.log(error))
   }
 
+  let alreadyTagged = task.tags.map((tag) => {return tag.id})
+
   return (<div className="TaskTagList">
     {tagList.map((tag, index) => {
+      if (!alreadyTagged.includes(tag.id))
       return (
         <h3 key={index} onClick={()=>{addTaskToTag(tag)}}>
           {tag.name}

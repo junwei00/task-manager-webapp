@@ -10,6 +10,7 @@ function Topbar({ handleSearch, handleSort, buttonState, onClickNewTask }) {
         placeholder='Search...'/>
       <select onChange={e => handleSort(e)}>
         <option>Created</option>
+        <option>Edited</option>
         <option>Deadline</option>
         <option>Alphanumeric</option>
       </select>
