@@ -5,6 +5,7 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
   const [title, setTitle] = useState(task.title)
   const [description, setDescription] = useState(task.description)
   const [deadline, setDeadline] = useState(task.deadline)
+  const [formValid, setFormValid] = useState(false)
 
   const handleSubmit = (e) => {
     patchTask()
@@ -23,6 +24,14 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
       })
       .catch((error) => console.log(error))
   }
+  
+  function validateForm() {
+    if (title == '' || description == '' || deadline == '') {
+      setFormValid(false)
+    } else {
+      setFormValid(true)
+    }
+  }
 
   return (
     <form className="EditTask" onSubmit={handleSubmit}>
@@ -31,7 +40,9 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => {
+            validateForm()
+            setTitle(e.target.value)}}
         />
       </div>
       <div>
@@ -40,7 +51,9 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
           type='text'
           placeholder='Description'
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={(e) => {
+            validateForm()
+            setDescription(e.target.value)}}
         />
       </div>
       <div>
@@ -48,10 +61,12 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
           type='date'
           placeholder='Deadline'
           value={deadline}
-          onChange={(e) => setDeadline(e.target.value)}
+          onChange={(e) => {
+            validateForm()
+            setDeadline(e.target.value)}}
         />
       </div>
-      <input className="Submit" type='submit' value='Save Task'/>
+      <input disabled={!formValid} className="Submit" type='submit' value='Save Task'/>
     </form>
   );
 }

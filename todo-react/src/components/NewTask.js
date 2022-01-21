@@ -5,6 +5,7 @@ function NewTask({ setShowNewTask, getTasks }) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [deadline, setDeadline] = useState('')
+  const [formValid, setFormValid] = useState(false)
 
   function handleSubmit (e) {
     if (title == '' || description == '' || deadline == '') {
@@ -32,6 +33,14 @@ function NewTask({ setShowNewTask, getTasks }) {
       .catch((error) => console.log(error))
   }
 
+  function validateForm() {
+    if (title == '' || description == '' || deadline == '') {
+      setFormValid(false)
+    } else {
+      setFormValid(true)
+    }
+  }
+
   return (
     <form className="NewTask" onSubmit={handleSubmit}>
       <div>
@@ -39,7 +48,9 @@ function NewTask({ setShowNewTask, getTasks }) {
           type='text'
           placeholder='Title'
           value={title}
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => {
+            validateForm()
+            setTitle(e.target.value)}}
         />
       </div>
       <div>
@@ -48,7 +59,9 @@ function NewTask({ setShowNewTask, getTasks }) {
           type='text'
           placeholder='Description'
           value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          onChange={(e) => {
+            validateForm()
+            setDescription(e.target.value)}}
         />
       </div>
       <div>
@@ -56,10 +69,12 @@ function NewTask({ setShowNewTask, getTasks }) {
           type='date'
           placeholder='Deadline'
           value={deadline}
-          onChange={(e) => setDeadline(e.target.value)}
+          onChange={(e) => {
+            validateForm()
+            setDeadline(e.target.value)}}
         />
       </div>
-      <input className="Submit" type='submit' value='Save Task'/>
+      <input disabled={!formValid} className="Submit" type='submit' value='Save Task'/>
     </form>
   );
 }
