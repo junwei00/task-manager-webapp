@@ -83,7 +83,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaskList
          { task.tags.map((tag, index) => {
            return <Tag key={index} tag={tag} refreshTask={() => refreshTask()} task={task}/>
          }) }
-         <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-Tags" : "+Tags"}</h3>
+         <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-" : "+"}</h3>
          {showTagTask? <TagTask task={task} tagList={tagList} refreshTask={() => refreshTask()}/> : ""}
       </div>
       <h4 className="Deadline">Deadline: {task.deadline === null ? "None" : task.deadline}</h4>

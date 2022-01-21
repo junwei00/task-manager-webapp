@@ -73,7 +73,7 @@ function App() {
          return 0})
     } else if (sortBy == "Deadline") {
       result.sort((task1, task2) => 
-        {if (task1.deadline === null) return -1
+        {if (task1.deadline === null) return 1
          if (task2.deadline === null) return -1
          if (task1.deadline > task2.deadline) return 1
          if (task2.deadline > task1.deadline) return -1

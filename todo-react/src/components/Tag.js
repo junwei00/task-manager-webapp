@@ -19,7 +19,7 @@ function Tag({ tag, refreshTask, task }) {
   return (
     <h3 className="TagName" onMouseEnter={() => setIsHover(true)} 
       onMouseLeave={() => setIsHover(false)} onClick={deleteTagFromTask}>
-      {isHover ? "-" : "#"}
+      {isHover ? "✕ " : ""}
       {tag.name}
     </h3>)
 }

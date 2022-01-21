@@ -46,7 +46,7 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
         />
       </div>
       <div>
-        <input
+        <textarea
           className="Description"
           type='text'
           placeholder='Description'

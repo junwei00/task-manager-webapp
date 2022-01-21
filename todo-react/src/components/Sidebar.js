@@ -6,7 +6,7 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)
   const [newtagName, setNewtagName] = useState("")
-  const [currentTag, setCurrentTag] = useState(0)
+  const [currentTag, setCurrentTag] = useState(-1)
 
   function Newtag() {
     if (showEdittag && !showNewtag) {
@@ -62,12 +62,12 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
           setFilteredTaskList(taskList)
           setCurrentTag(-1)
           }}>
-        <a>
+        <li>
           All
-        </a>
-        <a className='Number'>
+        </li>
+        <li className='Number'>
           {taskList.length}
-        </a>
+        </li>
       </div>
       {tagList.map((tag, index) => {
         let className="Tag"
@@ -82,23 +82,23 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
           filterTasksByTag(tag.id)
           setCurrentTag(tag.id)
           }}>
-          <a>
+          <li>
             {tag.name}
-          </a>
+          </li>
           {showEdittag 
-            ? <a className="Cross" onClick={() => deleteTag(tag.id)}>
+            ? <li className="Cross" onClick={() => deleteTag(tag.id)}>
                 X
-              </a> 
-            : <a className="Number">{tag.tasks.length}</a>}
+              </li> 
+            : <li className="Number">{tag.tasks.length}</li>}
         </div>)
       })}
       <div className="NewEdit">
-      <a className="Newtag" onClick={Newtag} >
+      <li className="Newtag" onClick={Newtag} >
         {showNewtag ? "Close" : "New"}
-      </a>
-      <a className="Edittag" onClick={Edittag} >
+      </li>
+      <li className="Edittag" onClick={Edittag} >
         {showEdittag ? "Close" : "Edit"}
-      </a>
+      </li>
       </div>
       {showNewtag ? newtagInput : ""}
     </div>

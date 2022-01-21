@@ -49,8 +49,8 @@ function NewTask({ setShowNewTask, getTasks }) {
         />
       </div>
       <div>
-        <input
-          className="Desscription"
+        <textarea
+          className="Description"
           type='text'
           placeholder='Description'
           value={description}
