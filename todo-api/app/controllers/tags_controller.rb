@@ -9,6 +9,11 @@ class TagsController < ApplicationController
         render :json => tag.to_json(:include => [:tasks])
     end
 
+    def show_tasks
+        tag_tasks = Tag.find(params[:id]).tasks
+        render :json => tag_tasks.to_json(:include => [:tags])
+    end
+
     def create
         tag = Tag.create(tag_params)
     end 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from "axios"
 
-function Sidebar({ tagList, getTags }) {
+function Sidebar({ tagList, getTags, getTasksByTag }) {
 
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)
@@ -60,7 +60,7 @@ function Sidebar({ tagList, getTags }) {
       {tagList.map((tag, index) => {
         return (
         <div key={index} className="Tag">
-          <a >
+          <a onClick={() => getTasksByTag(tag.id)}>
             {tag.name}
           </a>
           {showEdittag 
