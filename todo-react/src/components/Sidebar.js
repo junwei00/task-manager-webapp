@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from "axios"
 
-function Sidebar({ tagList, getTags, getTasksByTag, filterTasksByTag, setFilteredTaskList, taskList }) {
+function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, taskList }) {
 
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)

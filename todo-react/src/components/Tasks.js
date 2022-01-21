@@ -6,11 +6,22 @@ function Tasks({ setTaskList, setFilteredTaskList, filteredTaskList, tagList, ge
   return (
     <div className="Tasks">
       <h2>My Tasks</h2>
-      {filteredTaskList.map((task, index) => (
-        <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
-          filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
-          tagList={tagList} getTags={getTags}/>
-      ))}
+      {filteredTaskList.map((task, index) => {
+        let thisTask = <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
+                        filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
+                        tagList={tagList} getTags={getTags}/>
+        if (!(task.status == "done")) {
+          return thisTask
+        }
+      })}
+      {filteredTaskList.map((task, index) => {
+        let thisTask = <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
+                        filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
+                        tagList={tagList} getTags={getTags}/>
+        if (task.status == "done") {
+          return thisTask
+        }
+      })}
     </div>
   );
 }
