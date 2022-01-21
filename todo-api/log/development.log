@@ -24290,3 +24290,2338 @@ Processing by TagsController#index as HTML
 Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 6520)
 
 
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:40:58 +0800
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:40:58 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+Processing by TasksController#index as HTML
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+Completed 200 OK in 48ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 9831)
+
+
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 13210)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:40:59 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (6.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 61ms (Views: 0.9ms | ActiveRecord: 8.7ms | Allocations: 9525)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:41:00 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 1.1ms | Allocations: 6521)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:41:00 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (6.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 59ms (Views: 0.2ms | ActiveRecord: 9.1ms | Allocations: 9525)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:41:01 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 6520)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:41:02 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:41:02 +0800
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+Processing by TagsController#index as HTML
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 11530)
+
+
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 8607)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:41:18 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (5.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 7.4ms | Allocations: 9524)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:41:19 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 6520)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:49:54 +0800
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:49:54 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#index as HTML
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:3:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 0.2ms | ActiveRecord: 2.2ms | Allocations: 14018)
+
+
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 0.2ms | ActiveRecord: 4.4ms | Allocations: 17891)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:50:12 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 9524)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:50:12 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 6539)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:50:14 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.9ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (2.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (3.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 62ms (Views: 0.1ms | ActiveRecord: 8.3ms | Allocations: 9525)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:50:14 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 6522)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:57:32 +0800
+Processing by TasksController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 10013)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:57:33 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 6539)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:57:50 +0800
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:57:50 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 10342)
+
+
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 58ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 14106)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 09:58:21 +0800
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 09:58:21 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.6ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+Completed 200 OK in 53ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 8105)
+
+
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 11638)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:00:07 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 0.2ms | ActiveRecord: 2.7ms | Allocations: 9524)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 10:00:07 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 6521)
+
+
+Started PUT "/api/tasks/25" for 127.0.0.1 at 2022-01-21 10:25:33 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>"flagged", "id"=>"25", "task"=>{"status"=>"flagged"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.7ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 02:25:33.152369"], ["status", "flagged"], ["id", 25]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (14.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 37ms (Views: 0.9ms | ActiveRecord: 15.9ms | Allocations: 2778)
+
+
+Started GET "/api/tasks/25" for 127.0.0.1 at 2022-01-21 10:25:33 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1445)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:25:33 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 9530)
+
+
+Started PUT "/api/tasks/25" for 127.0.0.1 at 2022-01-21 10:25:33 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>nil, "id"=>"25", "task"=>{"status"=>nil}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 02:25:33.752973"], ["status", nil], ["id", 25]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 13.0ms | Allocations: 2276)
+
+
+Started GET "/api/tasks/25" for 127.0.0.1 at 2022-01-21 10:25:33 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1426)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:25:34 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (34.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 0.1ms | ActiveRecord: 35.7ms | Allocations: 9525)
+
+
+Started PUT "/api/tasks/28" for 127.0.0.1 at 2022-01-21 10:25:35 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>"flagged", "id"=>"28", "task"=>{"status"=>"flagged"}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 02:25:35.181306"], ["status", "flagged"], ["id", 28]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 16.3ms | Allocations: 2298)
+
+
+Started GET "/api/tasks/28" for 127.0.0.1 at 2022-01-21 10:25:35 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1431)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:25:35 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 28ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 9531)
+
+
+Started PUT "/api/tasks/28" for 127.0.0.1 at 2022-01-21 10:25:35 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>nil, "id"=>"28", "task"=>{"status"=>nil}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.3ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 02:25:35.853458"], ["status", nil], ["id", 28]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 21ms (Views: 0.3ms | ActiveRecord: 15.7ms | Allocations: 2294)
+
+
+Started GET "/api/tasks/28" for 127.0.0.1 at 2022-01-21 10:25:36 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1425)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:25:36 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 9525)
+
+
+Started PUT "/api/tasks/15" for 127.0.0.1 at 2022-01-21 10:39:24 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>"flagged", "id"=>"15", "task"=>{"status"=>"flagged"}}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 02:39:24.815244"], ["status", "flagged"], ["id", 15]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (16.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 33ms (Views: 0.6ms | ActiveRecord: 18.9ms | Allocations: 2779)
+
+
+Started GET "/api/tasks/15" for 127.0.0.1 at 2022-01-21 10:39:25 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1446)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:39:25 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 9530)
+
+
+Started PUT "/api/tasks/15" for 127.0.0.1 at 2022-01-21 10:39:25 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>nil, "id"=>"15", "task"=>{"status"=>nil}}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 02:39:25.503619"], ["status", nil], ["id", 15]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (16.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 23ms (Views: 0.3ms | ActiveRecord: 16.7ms | Allocations: 2296)
+
+
+Started GET "/api/tasks/15" for 127.0.0.1 at 2022-01-21 10:39:25 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1427)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 10:39:26 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 9524)
+
+
+Started DELETE "/api/tags/6" for 127.0.0.1 at 2022-01-21 11:09:28 +0800
+Processing by TagsController#destroy as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:12:in `destroy'
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:12:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:13:in `destroy'
+  [1m[36mTag::HABTM_Tasks Delete All (0.3ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 6]]
+  ↳ app/controllers/tags_controller.rb:13:in `destroy'
+  [1m[36mTag Destroy (0.3ms)[0m  [1m[31mDELETE FROM "tags" WHERE "tags"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/tags_controller.rb:13:in `destroy'
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:13:in `destroy'
+Completed 204 No Content in 36ms (ActiveRecord: 20.7ms | Allocations: 2842)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 11:09:28 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 5617)
+
+
+Started POST "/api/tags" for 127.0.0.1 at 2022-01-21 11:09:31 +0800
+Processing by TagsController#create as HTML
+  Parameters: {"name"=>"Relax", "tag"=>{"name"=>"Relax"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:8:in `create'
+  [1m[36mTag Create (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Relax"], ["created_at", "2022-01-21 03:09:31.592357"], ["updated_at", "2022-01-21 03:09:31.592357"]]
+  ↳ app/controllers/tags_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (11.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:8:in `create'
+Completed 204 No Content in 20ms (ActiveRecord: 11.9ms | Allocations: 1650)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 11:09:31 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 6520)
+
+
+Started PUT "/api/tasks/28" for 127.0.0.1 at 2022-01-21 11:09:39 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>"done", "id"=>"28", "task"=>{"status"=>"done"}}
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.4ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 03:09:39.396659"], ["status", "done"], ["id", 28]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (15.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 16.7ms | Allocations: 2317)
+
+
+Started GET "/api/tasks/28" for 127.0.0.1 at 2022-01-21 11:09:39 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1444)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 11:09:40 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 67ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 9531)
+
+
+Started PUT "/api/tasks/28" for 127.0.0.1 at 2022-01-21 11:09:41 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"status"=>nil, "id"=>"28", "task"=>{"status"=>nil}}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTask Update (0.5ms)[0m  [1m[33mUPDATE "tasks" SET "updated_at" = ?, "status" = ? WHERE "tasks"."id" = ?[0m  [["updated_at", "2022-01-21 03:09:41.691245"], ["status", nil], ["id", 28]]
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+  [1m[36mTRANSACTION (10.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tasks_controller.rb:19:in `update'
+Completed 200 OK in 19ms (Views: 0.5ms | ActiveRecord: 11.2ms | Allocations: 2295)
+
+
+Started GET "/api/tasks/28" for 127.0.0.1 at 2022-01-21 11:09:42 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 28], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1425)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 11:09:42 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 9524)
+
+
+Started GET "/api/tags" for ::1 at 2022-01-21 11:34:59 +0800
+Processing by TagsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:3:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 7021)
+
+
+Started GET "/api/tags" for ::1 at 2022-01-21 11:49:09 +0800
+Processing by TagsController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:3:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 2.6ms | Allocations: 7020)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 11:56:31 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 11:58:00 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 11:59:27 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 11:59:28 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:00:03 +0800
+  
+ActionController::RoutingError (No route matches [PATCH] "/api/tags/1"):
+  
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:03:30 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:03:49 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:03:50 +0800
+  
+AbstractController::ActionNotFound (The action 'update' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:04:05 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms | Allocations: 3191)
+
+
+  
+NameError (undefined local variable or method `tags' for #<TagsController:0x000000000386a8>
+Did you mean?  tag):
+  
+app/controllers/tags_controller.rb:20:in `update'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:04:16 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:20:in `update'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 10077)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:04:39 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:20:in `update'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 3.0ms | Allocations: 10081)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:05:01 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 1380)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:05:40 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 2.2ms | Allocations: 1376)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:07:17 +0800
+  
+SyntaxError (/home/oaeiu/todo-app/cvwo-todo-app/todo-api/app/controllers/tags_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/tags_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/tags_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:07:32 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 204 No Content in 3ms (ActiveRecord: 0.8ms | Allocations: 1351)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:07:33 +0800
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 457)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:08:38 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 204 No Content in 3ms (ActiveRecord: 1.2ms | Allocations: 1313)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:08:38 +0800
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 204 No Content in 1ms (ActiveRecord: 0.2ms | Allocations: 457)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:09:26 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.3ms | Allocations: 1384)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:10:43 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.9ms | Allocations: 1423)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:11:14 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.9ms | Allocations: 1383)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:11:59 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1377)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:13:20 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:18:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:21:in `update'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 9968)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:13:53 +0800
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for TagsController):
+  
+actionpack (7.0.1) lib/abstract_controller/base.rb:146:in `process'
+actionpack (7.0.1) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.1) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.1) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.1) lib/action_dispatch/routing/route_set.rb:850:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.1) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.1) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.1) lib/rails/engine.rb:530:in `call'
+puma (5.5.2) lib/puma/configuration.rb:249:in `call'
+puma (5.5.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.5.2) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.5.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.5.2) lib/puma/server.rb:447:in `process_client'
+puma (5.5.2) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:14:45 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 16323)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:15:36 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+Completed 200 OK in 22ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 9924)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:16:36 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1537)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:17:07 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1460)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:17:22 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 10122)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:18:12 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+Completed 404 Not Found in 13ms (ActiveRecord: 1.7ms | Allocations: 7143)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task without an ID):
+  
+app/controllers/tags_controller.rb:26:in `update'
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:18:44 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.5ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 10.7ms | Allocations: 15917)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:19:29 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"delete", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 10224)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:19:35 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.3ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 10.1ms | Allocations: 13457)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTag::HABTM_Tasks Delete All (0.5ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ? AND "tags_tasks"."task_id" = ?[0m  [["tag_id", 1], ["task_id", 3]]
+  [1m[36mTRANSACTION (15.4ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:21:38 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 16320)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:22:09 +0800
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"delete", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTag::HABTM_Tasks Delete All (0.1ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ? AND "tags_tasks"."task_id" = ?[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `update'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 12583)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:22:11 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"delete", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTag::HABTM_Tasks Delete All (0.1ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ? AND "tags_tasks"."task_id" = ?[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `update'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 3587)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:22:19 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.3ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (10.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 11.4ms | Allocations: 4502)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:22:21 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1666)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:22:23 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"delete", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTag::HABTM_Tasks Delete All (0.3ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ? AND "tags_tasks"."task_id" = ?[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `update'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 16.3ms | Allocations: 3587)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:22:25 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1534)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:24:19 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 16401)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:24:21 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.3ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (16.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 29ms (Views: 0.1ms | ActiveRecord: 17.5ms | Allocations: 4712)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:24:22 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.2ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 16.0ms | Allocations: 4266)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:25:22 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 16623)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:25:24 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"delete", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTag::HABTM_Tasks Delete All (0.4ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ? AND "tags_tasks"."task_id" = ?[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `update'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 8.7ms | Allocations: 3893)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:25:25 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1534)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:28:15 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 16353)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:28:54 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 16326)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:28:55 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.2ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 8.9ms | Allocations: 4714)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:29:00 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1666)
+
+
+Started PATCH "/api/tags/1" for ::1 at 2022-01-21 12:29:02 +0800
+Processing by TagsController#update as */*
+  Parameters: {"do"=>"delete", "task"=>3, "id"=>"1", "tag"=>{}}
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTag::HABTM_Tasks Delete All (0.3ms)[0m  [1m[31mDELETE FROM "tags_tasks" WHERE "tags_tasks"."tag_id" = ? AND "tags_tasks"."task_id" = ?[0m  [["tag_id", 1], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTRANSACTION (14.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:29:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:30:in `update'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 15.5ms | Allocations: 3593)
+
+
+Started GET "/api/tags/1" for ::1 at 2022-01-21 12:29:03 +0800
+Processing by TagsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:8:in `show'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1534)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:30:04 +0800
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 12:30:04 +0800
+Processing by TasksController#index as HTML
+Processing by TagsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:3:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:3:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+Completed 200 OK in 65ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 30690)
+
+
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 70ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 32553)
+
+
+Started PUT "/api/tasks/16" for 127.0.0.1 at 2022-01-21 12:36:46 +0800
+Processing by TasksController#update as HTML
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"16"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:18:in `update'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.5ms | Allocations: 1076)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Task with 'id'=16):
+  
+app/controllers/tasks_controller.rb:18:in `update'
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:40:01 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 12:40:01 +0800
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 0.3ms | ActiveRecord: 2.4ms | Allocations: 10095)
+
+
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 6539)
+
+
+Started PUT "/api/tags/2" for 127.0.0.1 at 2022-01-21 12:40:19 +0800
+Processing by TagsController#update as HTML
+  Parameters: {"do"=>"add", "task"=>20, "id"=>"2", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.4ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 2], ["task_id", 20]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (8.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 10.0ms | Allocations: 4600)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:40:28 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 0.3ms | ActiveRecord: 2.0ms | Allocations: 9622)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 12:40:29 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 6660)
+
+
+Started GET "/api/tasks" for ::1 at 2022-01-21 12:40:44 +0800
+Processing by TasksController#index as */*
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 9627)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:42:06 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 9623)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 12:42:06 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 26ms (Views: 0.1ms | ActiveRecord: 1.4ms | Allocations: 6659)
+
+
+Started PUT "/api/tags/5" for 127.0.0.1 at 2022-01-21 12:42:13 +0800
+Processing by TagsController#update as HTML
+  Parameters: {"do"=>"add", "task"=>25, "id"=>"5", "tag"=>{}}
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.5ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.4ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 5], ["task_id", 25]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 32ms (Views: 0.1ms | ActiveRecord: 16.9ms | Allocations: 3993)
+
+
+Started GET "/api/tasks/25" for 127.0.0.1 at 2022-01-21 12:42:13 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1525)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:42:13 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 9720)
+
+
+Started PUT "/api/tags/2" for 127.0.0.1 at 2022-01-21 12:42:38 +0800
+Processing by TagsController#update as HTML
+  Parameters: {"do"=>"add", "task"=>3, "id"=>"2", "tag"=>{}}
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:23:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTag::HABTM_Tasks Create (0.3ms)[0m  [1m[32mINSERT INTO "tags_tasks" ("tag_id", "task_id") VALUES (?, ?)[0m  [["tag_id", 2], ["task_id", 3]]
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/tags_controller.rb:26:in `update'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:27:in `update'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 11.9ms | Allocations: 4135)
+
+
+Started GET "/api/tasks/3" for 127.0.0.1 at 2022-01-21 12:42:39 +0800
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/tasks_controller.rb:8:in `show'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1523)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:42:39 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 9818)
+
+
+Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 12:42:41 +0800
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.4ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 28]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 27]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 25]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 20]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 15]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 4]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 3]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 2]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "tags_tasks" ON "tags"."id" = "tags_tasks"."tag_id" WHERE "tags_tasks"."task_id" = ?[0m  [["task_id", 1]]
+  ↳ app/controllers/tasks_controller.rb:4:in `index'
+Completed 200 OK in 66ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 9818)
+
+
+Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 12:42:42 +0800
+Processing by TagsController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY created_at DESC[0m
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 16]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 5]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 4]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 3]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 2]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+  [1m[36mTask Load (0.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" INNER JOIN "tags_tasks" ON "tasks"."id" = "tags_tasks"."task_id" WHERE "tags_tasks"."tag_id" = ?[0m  [["tag_id", 1]]
+  ↳ app/controllers/tags_controller.rb:4:in `index'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 6927)
+
+

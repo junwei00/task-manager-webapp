@@ -87,6 +87,7 @@
   font-size: 25px;
   display: block;
   color:black;
+  cursor: pointer;
 }
 
 .Sidebar a:hover {
@@ -102,6 +103,13 @@
   align-self: flex-end;
   margin-left: auto;
   margin-right: 5px;
+}
+
+.Sidebar .Number {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 5px;
+  color: lightslategrey;
 }
 
 .Sidebar .NewEdit {
@@ -153,10 +161,34 @@
   display: flex;
 }
 
+.Task .AddTagToTask {
+  margin-left: 10px;
+  color: grey;
+  cursor: pointer;
+}
+
+.Task .AddTagToTask:hover {
+  margin-left: 10px;
+  color: lightgrey;
+}
+
 .Task .Tags {
   display: inline;
   color: grey;
-  margin-left: 20px;
+  margin-left: 10px;
+}
+
+.Task .TagTaskList {
+  margin-left: 15px;
+  text-align: left;
+}
+
+.Task .TagTaskList h3 {
+  cursor: pointer;
+}
+
+.Task .TagTaskList h3:hover {
+  color:grey;
 }
 
 .Task .Title {

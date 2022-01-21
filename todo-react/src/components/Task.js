@@ -1,9 +1,11 @@
 import axios from "axios";
 import { useState } from "react";
 import EditTask from "./EditTask";
+import TagTask from "./TagTask";
 
 function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList, tagList}) {
   const [showEditTask, setShowEditTask] = useState(false)
+  const [showTagTask, setShowTagTask] = useState(false)
 
   function refreshTask() {
     axios
@@ -76,7 +78,9 @@ function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList,
     <div className={className}>
       <div className="Header">
          <h3 className="Title">{task.title} </h3>
-         <h3 className="Tags">{tagString}</h3>
+         {tagString=="" ? "" : <h3 className="Tags">{tagString}</h3>}
+         <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>+Tag</h3>
+         {showTagTask? <TagTask task={task} tagList={tagList} refreshTask={() => refreshTask()}/> : ""}
       </div>
       <h4 className="Deadline">Deadline: {task.deadline}</h4>
       <p>{task.description}</p>

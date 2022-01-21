@@ -60,21 +60,21 @@ function Sidebar({ tagList, getTags }) {
       {tagList.map((tag, index) => {
         return (
         <div key={index} className="Tag">
-          <a href="#" >
+          <a >
             {tag.name}
           </a>
           {showEdittag 
-            ? <a href = "#" className="Cross" onClick={() => deleteTag(tag.id)}>
+            ? <a className="Cross" onClick={() => deleteTag(tag.id)}>
                 X
               </a> 
-            : ""}
+            : <a className="Number">{tag.tasks.length}</a>}
         </div>)
       })}
       <div className="NewEdit">
-      <a className="Newtag" onClick={Newtag} href="#">
+      <a className="Newtag" onClick={Newtag} >
         {showNewtag ? "Close" : "New"}
       </a>
-      <a className="Edittag" onClick={Edittag} href="#">
+      <a className="Edittag" onClick={Edittag} >
         {showEdittag ? "Close" : "Edit"}
       </a>
       </div>
