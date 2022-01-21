@@ -161,6 +161,16 @@
   display: flex;
 }
 
+.Task .TagName {
+  margin-inline: 2px ;
+  color: lightslategrey;
+}
+
+.Task .TagName:hover {
+  cursor: pointer;
+  color: lightcoral
+}
+
 .Task .AddTagToTask {
   margin-left: 10px;
   color: grey;
@@ -172,27 +182,22 @@
   color: lightgrey;
 }
 
-.Task .Tags {
-  display: inline;
-  color: grey;
-  margin-left: 10px;
-}
-
-.Task .TagTaskList {
+.Task .TaskTagList {
   margin-left: 15px;
   text-align: left;
 }
 
-.Task .TagTaskList h3 {
+.Task .TaskTagList h3 {
   cursor: pointer;
 }
 
-.Task .TagTaskList h3:hover {
+.Task .TaskTagList h3:hover {
   color:grey;
 }
 
 .Task .Title {
   text-align: left;
+  margin-right: 5px;
 }
 
 .Task h3 {

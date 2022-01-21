@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import EditTask from "./EditTask";
 import TagTask from "./TagTask";
+import Tag from "./Tag"
 
 function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList, tagList}) {
   const [showEditTask, setShowEditTask] = useState(false)
@@ -17,6 +18,7 @@ function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList,
         refreshTasklist()
       })
       .catch((error) => console.log(error))
+    console.log('refreshed task')
   }
 
   function refreshTasklist() {
@@ -78,8 +80,10 @@ function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList,
     <div className={className}>
       <div className="Header">
          <h3 className="Title">{task.title} </h3>
-         {tagString=="" ? "" : <h3 className="Tags">{tagString}</h3>}
-         <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>+Tag</h3>
+         { task.tags.map((tag, index) => {
+           return <Tag key={index} tag={tag} refreshTask={() => refreshTask()} task={task}/>
+         }) }
+         <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-Tags" : "+Tags"}</h3>
          {showTagTask? <TagTask task={task} tagList={tagList} refreshTask={() => refreshTask()}/> : ""}
       </div>
       <h4 className="Deadline">Deadline: {task.deadline}</h4>

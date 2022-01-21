@@ -13,7 +13,7 @@ function TagTask({ task, tagList, refreshTask }) {
       .catch((error) => console.log(error))
   }
 
-  return (<div className="TagTaskList">
+  return (<div className="TaskTagList">
     {tagList.map((tag, index) => {
       return (
         <h3 key={index} onClick={()=>{addTaskToTag(tag)}}>
