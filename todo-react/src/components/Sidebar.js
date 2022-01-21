@@ -8,10 +8,16 @@ function Sidebar({ tagList, getTags }) {
   const [newtagName, setNewtagName] = useState("")
 
   function Newtag() {
+    if (showEdittag && !showNewtag) {
+      setShowEdittag(false)
+    }
     setShowNewtag(!showNewtag)  
   }
 
   function Edittag() {
+    if (!showEdittag && showNewtag) {
+      setShowNewtag(false)
+    }
     setShowEdittag(!showEdittag)
   }
 
