@@ -31,6 +31,15 @@ function App() {
       .catch((error) => console.log(error))
   }
 
+  function filterTasksByTag(id) {
+    let result = []
+    result = taskList.filter((task) => {
+      let tags = task.tags.map((tag) => {return tag.id})
+      return tags.includes(id)
+    })
+    setFilteredTaskList(result)
+  }
+
   function getTags() {
     axios
       .get("/api/tags")
@@ -38,25 +47,6 @@ function App() {
         setTagList(res.data)
       })
       .catch((error) => console.log(error))
-  }
-
-  function taskHasTag(task, tagid) {
-    for (let i = 0; i < task.tags.length; i++) {
-      if (task.tags[i].id == tagid) {
-        console.log(task.id)
-        return true;
-      }
-    }
-    return true;
-  }
-
-  function filterTasksByTag(tagid) {
-    let result = []
-    result = taskList.filter((task) => {
-      taskHasTag(task, tagid)
-    })
-    console.log(result)
-    setFilteredTaskList(result)
   }
 
   function handleSearch(e) {
@@ -97,7 +87,8 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar tagList={tagList} getTags={getTags} getTasksByTag={getTasksByTag}/>
+      <Sidebar tagList={tagList} getTags={getTags} filterTasksByTag={filterTasksByTag}
+        setFilteredTaskList={setFilteredTaskList} taskList={taskList}/>
       <div className='Main'>
         <Topbar handleSearch={handleSearch} handleSort={handleSort} 
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />

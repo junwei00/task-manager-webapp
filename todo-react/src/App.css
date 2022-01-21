@@ -94,6 +94,10 @@
   color: grey
 }
 
+.Sidebar .AllTags {
+  text-align: left;
+}
+
 .Sidebar .Tag {
   display: inline-flex;
   width: 100%;
