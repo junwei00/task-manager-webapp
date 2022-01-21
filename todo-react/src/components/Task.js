@@ -86,7 +86,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaskList
          <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-Tags" : "+Tags"}</h3>
          {showTagTask? <TagTask task={task} tagList={tagList} refreshTask={() => refreshTask()}/> : ""}
       </div>
-      <h4 className="Deadline">Deadline: {task.deadline}</h4>
+      <h4 className="Deadline">Deadline: {task.deadline === null ? "None" : task.deadline}</h4>
       <p>{task.description}</p>
       <div className="Buttons">
         <button onClick = {toggleDoneTask}>

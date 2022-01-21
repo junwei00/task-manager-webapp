@@ -8,12 +8,7 @@ function NewTask({ setShowNewTask, getTasks }) {
   const [formValid, setFormValid] = useState(false)
 
   function handleSubmit (e) {
-    if (title == '' || description == '' || deadline == '') {
-      alert("Fields cannot be empty")
-      return;
-    } else {
-      postTask()
-    }
+    postTask()
   }
 
   function postTask() {
@@ -34,7 +29,7 @@ function NewTask({ setShowNewTask, getTasks }) {
   }
 
   function validateForm() {
-    if (title == '' || description == '' || deadline == '') {
+    if (title == '') {
       setFormValid(false)
     } else {
       setFormValid(true)
@@ -55,7 +50,7 @@ function NewTask({ setShowNewTask, getTasks }) {
       </div>
       <div>
         <input
-          className="Description"
+          className="Desscription"
           type='text'
           placeholder='Description'
           value={description}

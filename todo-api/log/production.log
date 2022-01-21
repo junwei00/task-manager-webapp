@@ -1,0 +1,85 @@
+W, [2022-01-21T18:14:14.746344 #1032]  WARN -- : You are running SQLite in production, this is generally not recommended. You can disable this warning by setting "config.active_record.sqlite3_production_warning=false".
+I, [2022-01-21T18:14:37.435160 #1032]  INFO -- : [1d40a634-a933-4ed4-ade5-f3e4e952adbf] Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 18:14:37 +0800
+I, [2022-01-21T18:14:37.435996 #1032]  INFO -- : [1d40a634-a933-4ed4-ade5-f3e4e952adbf] Processing by TasksController#index as HTML
+I, [2022-01-21T18:14:37.436702 #1032]  INFO -- : [4ac901d7-94b8-4cf9-bc67-4f49b49c6038] Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 18:14:37 +0800
+I, [2022-01-21T18:14:37.440563 #1032]  INFO -- : [4ac901d7-94b8-4cf9-bc67-4f49b49c6038] Processing by TagsController#index as HTML
+I, [2022-01-21T18:14:37.440300 #1032]  INFO -- : [1d40a634-a933-4ed4-ade5-f3e4e952adbf] Completed 500 Internal Server Error in 4ms (ActiveRecord: 1.6ms | Allocations: 1274)
+F, [2022-01-21T18:14:37.441591 #1032] FATAL -- : [1d40a634-a933-4ed4-ade5-f3e4e952adbf]   
+[1d40a634-a933-4ed4-ade5-f3e4e952adbf] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tasks):
+[1d40a634-a933-4ed4-ade5-f3e4e952adbf]   
+[1d40a634-a933-4ed4-ade5-f3e4e952adbf] app/controllers/tasks_controller.rb:4:in `index'
+I, [2022-01-21T18:14:37.441354 #1032]  INFO -- : [4ac901d7-94b8-4cf9-bc67-4f49b49c6038] Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.2ms | Allocations: 441)
+F, [2022-01-21T18:14:37.441915 #1032] FATAL -- : [4ac901d7-94b8-4cf9-bc67-4f49b49c6038]   
+[4ac901d7-94b8-4cf9-bc67-4f49b49c6038] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tags):
+[4ac901d7-94b8-4cf9-bc67-4f49b49c6038]   
+[4ac901d7-94b8-4cf9-bc67-4f49b49c6038] app/controllers/tags_controller.rb:4:in `index'
+I, [2022-01-21T18:14:39.827990 #1032]  INFO -- : [d605ffc2-e666-4c0d-8dfc-60c1428ac4f9] Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 18:14:39 +0800
+I, [2022-01-21T18:14:39.828551 #1032]  INFO -- : [d605ffc2-e666-4c0d-8dfc-60c1428ac4f9] Processing by TasksController#index as HTML
+I, [2022-01-21T18:14:39.829034 #1032]  INFO -- : [d605ffc2-e666-4c0d-8dfc-60c1428ac4f9] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 234)
+F, [2022-01-21T18:14:39.829303 #1032] FATAL -- : [d605ffc2-e666-4c0d-8dfc-60c1428ac4f9]   
+[d605ffc2-e666-4c0d-8dfc-60c1428ac4f9] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tasks):
+[d605ffc2-e666-4c0d-8dfc-60c1428ac4f9]   
+[d605ffc2-e666-4c0d-8dfc-60c1428ac4f9] app/controllers/tasks_controller.rb:4:in `index'
+I, [2022-01-21T18:14:39.828213 #1032]  INFO -- : [f2754ebf-d8a0-49d9-8be1-a306a82f4fb4] Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 18:14:39 +0800
+I, [2022-01-21T18:14:39.829705 #1032]  INFO -- : [f2754ebf-d8a0-49d9-8be1-a306a82f4fb4] Processing by TagsController#index as HTML
+I, [2022-01-21T18:14:39.830235 #1032]  INFO -- : [f2754ebf-d8a0-49d9-8be1-a306a82f4fb4] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:14:39.830458 #1032] FATAL -- : [f2754ebf-d8a0-49d9-8be1-a306a82f4fb4]   
+[f2754ebf-d8a0-49d9-8be1-a306a82f4fb4] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tags):
+[f2754ebf-d8a0-49d9-8be1-a306a82f4fb4]   
+[f2754ebf-d8a0-49d9-8be1-a306a82f4fb4] app/controllers/tags_controller.rb:4:in `index'
+I, [2022-01-21T18:14:41.059114 #1032]  INFO -- : [cf723a26-ec3c-41e9-8fc0-17aeb5820568] Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 18:14:41 +0800
+I, [2022-01-21T18:14:41.059544 #1032]  INFO -- : [cf723a26-ec3c-41e9-8fc0-17aeb5820568] Processing by TasksController#index as HTML
+I, [2022-01-21T18:14:41.060194 #1032]  INFO -- : [cf723a26-ec3c-41e9-8fc0-17aeb5820568] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 234)
+F, [2022-01-21T18:14:41.060427 #1032] FATAL -- : [cf723a26-ec3c-41e9-8fc0-17aeb5820568]   
+[cf723a26-ec3c-41e9-8fc0-17aeb5820568] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tasks):
+[cf723a26-ec3c-41e9-8fc0-17aeb5820568]   
+[cf723a26-ec3c-41e9-8fc0-17aeb5820568] app/controllers/tasks_controller.rb:4:in `index'
+I, [2022-01-21T18:14:41.059722 #1032]  INFO -- : [d8fdb378-dc37-49c7-964d-0c9135d4ee9a] Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 18:14:41 +0800
+I, [2022-01-21T18:14:41.060868 #1032]  INFO -- : [d8fdb378-dc37-49c7-964d-0c9135d4ee9a] Processing by TagsController#index as HTML
+I, [2022-01-21T18:14:41.061324 #1032]  INFO -- : [d8fdb378-dc37-49c7-964d-0c9135d4ee9a] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:14:41.061546 #1032] FATAL -- : [d8fdb378-dc37-49c7-964d-0c9135d4ee9a]   
+[d8fdb378-dc37-49c7-964d-0c9135d4ee9a] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tags):
+[d8fdb378-dc37-49c7-964d-0c9135d4ee9a]   
+[d8fdb378-dc37-49c7-964d-0c9135d4ee9a] app/controllers/tags_controller.rb:4:in `index'
+I, [2022-01-21T18:14:41.578375 #1032]  INFO -- : [2bd1fb03-cfbb-4d1a-8b7f-ee041992f909] Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 18:14:41 +0800
+I, [2022-01-21T18:14:41.578931 #1032]  INFO -- : [2bd1fb03-cfbb-4d1a-8b7f-ee041992f909] Processing by TasksController#index as HTML
+I, [2022-01-21T18:14:41.579396 #1032]  INFO -- : [2bd1fb03-cfbb-4d1a-8b7f-ee041992f909] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:14:41.579622 #1032] FATAL -- : [2bd1fb03-cfbb-4d1a-8b7f-ee041992f909]   
+[2bd1fb03-cfbb-4d1a-8b7f-ee041992f909] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tasks):
+[2bd1fb03-cfbb-4d1a-8b7f-ee041992f909]   
+[2bd1fb03-cfbb-4d1a-8b7f-ee041992f909] app/controllers/tasks_controller.rb:4:in `index'
+I, [2022-01-21T18:14:41.578603 #1032]  INFO -- : [8872ec19-cd28-4731-94d1-65a8d149d8c6] Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 18:14:41 +0800
+I, [2022-01-21T18:14:41.580034 #1032]  INFO -- : [8872ec19-cd28-4731-94d1-65a8d149d8c6] Processing by TagsController#index as HTML
+I, [2022-01-21T18:14:41.580516 #1032]  INFO -- : [8872ec19-cd28-4731-94d1-65a8d149d8c6] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:14:41.580769 #1032] FATAL -- : [8872ec19-cd28-4731-94d1-65a8d149d8c6]   
+[8872ec19-cd28-4731-94d1-65a8d149d8c6] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tags):
+[8872ec19-cd28-4731-94d1-65a8d149d8c6]   
+[8872ec19-cd28-4731-94d1-65a8d149d8c6] app/controllers/tags_controller.rb:4:in `index'
+I, [2022-01-21T18:14:42.397330 #1032]  INFO -- : [026985a5-499f-4a5e-bd9f-7fe333cd6a1c] Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 18:14:42 +0800
+I, [2022-01-21T18:14:42.397888 #1032]  INFO -- : [026985a5-499f-4a5e-bd9f-7fe333cd6a1c] Processing by TasksController#index as HTML
+I, [2022-01-21T18:14:42.398325 #1032]  INFO -- : [026985a5-499f-4a5e-bd9f-7fe333cd6a1c] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:14:42.398550 #1032] FATAL -- : [026985a5-499f-4a5e-bd9f-7fe333cd6a1c]   
+[026985a5-499f-4a5e-bd9f-7fe333cd6a1c] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tasks):
+[026985a5-499f-4a5e-bd9f-7fe333cd6a1c]   
+[026985a5-499f-4a5e-bd9f-7fe333cd6a1c] app/controllers/tasks_controller.rb:4:in `index'
+I, [2022-01-21T18:14:42.397535 #1032]  INFO -- : [4851f4a6-2704-4d4e-81fe-2b538bd49bf0] Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 18:14:42 +0800
+I, [2022-01-21T18:14:42.398976 #1032]  INFO -- : [4851f4a6-2704-4d4e-81fe-2b538bd49bf0] Processing by TagsController#index as HTML
+I, [2022-01-21T18:14:42.399452 #1032]  INFO -- : [4851f4a6-2704-4d4e-81fe-2b538bd49bf0] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:14:42.399664 #1032] FATAL -- : [4851f4a6-2704-4d4e-81fe-2b538bd49bf0]   
+[4851f4a6-2704-4d4e-81fe-2b538bd49bf0] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tags):
+[4851f4a6-2704-4d4e-81fe-2b538bd49bf0]   
+[4851f4a6-2704-4d4e-81fe-2b538bd49bf0] app/controllers/tags_controller.rb:4:in `index'
+I, [2022-01-21T18:15:17.282939 #1032]  INFO -- : [319fd707-892c-4f0d-9a83-527460143bb7] Started GET "/api/tasks" for 127.0.0.1 at 2022-01-21 18:15:17 +0800
+I, [2022-01-21T18:15:17.283248 #1032]  INFO -- : [319fd707-892c-4f0d-9a83-527460143bb7] Processing by TasksController#index as HTML
+I, [2022-01-21T18:15:17.283649 #1032]  INFO -- : [319fd707-892c-4f0d-9a83-527460143bb7] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.1ms | Allocations: 216)
+F, [2022-01-21T18:15:17.283910 #1032] FATAL -- : [319fd707-892c-4f0d-9a83-527460143bb7]   
+[319fd707-892c-4f0d-9a83-527460143bb7] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tasks):
+[319fd707-892c-4f0d-9a83-527460143bb7]   
+[319fd707-892c-4f0d-9a83-527460143bb7] app/controllers/tasks_controller.rb:4:in `index'
+I, [2022-01-21T18:15:17.435150 #1032]  INFO -- : [7b8a05ac-88fb-46f2-acde-8ca925e25201] Started GET "/api/tags" for 127.0.0.1 at 2022-01-21 18:15:17 +0800
+I, [2022-01-21T18:15:17.435501 #1032]  INFO -- : [7b8a05ac-88fb-46f2-acde-8ca925e25201] Processing by TagsController#index as HTML
+I, [2022-01-21T18:15:17.435985 #1032]  INFO -- : [7b8a05ac-88fb-46f2-acde-8ca925e25201] Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.2ms | Allocations: 216)
+F, [2022-01-21T18:15:17.436223 #1032] FATAL -- : [7b8a05ac-88fb-46f2-acde-8ca925e25201]   
+[7b8a05ac-88fb-46f2-acde-8ca925e25201] ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tags):
+[7b8a05ac-88fb-46f2-acde-8ca925e25201]   
+[7b8a05ac-88fb-46f2-acde-8ca925e25201] app/controllers/tags_controller.rb:4:in `index'
