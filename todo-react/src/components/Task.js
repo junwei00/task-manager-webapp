@@ -4,7 +4,7 @@ import EditTask from "./EditTask";
 import TagTask from "./TagTask";
 import Tag from "./Tag"
 
-function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList, tagList}) {
+function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList, tagList, getTags}) {
   const [showEditTask, setShowEditTask] = useState(false)
   const [showTagTask, setShowTagTask] = useState(false)
 
@@ -16,9 +16,9 @@ function Task({ index, setFilteredTaskList, filteredTaskList, task, setTaskList,
         newTaskList[index] = res.data
         setFilteredTaskList(newTaskList)
         refreshTasklist()
+        getTags()
       })
       .catch((error) => console.log(error))
-    console.log('refreshed task')
   }
 
   function refreshTasklist() {

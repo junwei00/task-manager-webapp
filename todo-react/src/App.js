@@ -75,7 +75,7 @@ function App() {
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
         {showNewTask && <NewTask setShowNewTask={setShowNewTask} getTasks={getTasks}/> }
         <Tasks setTaskList={setTaskList} setFilteredTaskList={setFilteredTaskList} 
-          tagList={tagList} filteredTaskList={filteredTaskList}/>
+          tagList={tagList} filteredTaskList={filteredTaskList} getTags={() => getTags()}/>
       </div>
     </div>
   );
