@@ -95,15 +95,18 @@
   cursor: pointer;
 }
 
-.Sidebar a:hover {
-  color: grey
-}
-
-.Sidebar .AllTags {
-  text-align: left;
+.Sidebar .Tag:hover {
+  background-color: lightskyblue;
 }
 
 .Sidebar .Tag {
+  display: inline-flex;
+  padding-inline: 4px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.Sidebar .Tag-editing {
   display: inline-flex;
   padding-inline: 4px;
   width: 100%;
@@ -117,14 +120,18 @@
   align-self: flex-end;
   margin-left: auto;
   margin-right: 5px;
+  cursor: pointer;
+}
+
+.Sidebar .Cross:hover {
+  color: red;
 }
 
 .Sidebar .Number {
   align-self: flex-end;
   margin-left: auto;
   margin-right: 5px;
-  color: grey;
-  cursor: text;
+  color: black;
 }
 
 .Sidebar .NewEdit {
@@ -136,8 +143,16 @@
   width: 40%;
 }
 
+.Sidebar .Newtag:hover {
+  color:grey;
+}
+
 .Sidebar .Edittag {
   width: 40%;
+}
+
+.Sidebar .Edittag:hover {
+  color:grey;
 }
 
 .Sidebar .NewtagInput {

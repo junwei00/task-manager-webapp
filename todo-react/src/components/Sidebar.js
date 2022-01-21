@@ -58,11 +58,11 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
 
   return (
     <div className='Sidebar'>
-      <div className="Tag">
-        <a onClick={() => {
+      <div className={currentTag == -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
           setFilteredTaskList(taskList)
           setCurrentTag(-1)
           }}>
+        <a>
           All
         </a>
         <a className='Number'>
@@ -73,13 +73,16 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
         let className="Tag"
         if (tag.id == currentTag) {
           className+=" Tag-selected"
+        } 
+        if (showEdittag) {
+          className="Tag-editing"
         }
         return (
-        <div key={index} className={className}>
-          <a onClick={() => {
-            filterTasksByTag(tag.id)
-            setCurrentTag(tag.id)
-            }}>
+        <div key={index} className={className} onClick={() => {
+          filterTasksByTag(tag.id)
+          setCurrentTag(tag.id)
+          }}>
+          <a>
             {tag.name}
           </a>
           {showEdittag 

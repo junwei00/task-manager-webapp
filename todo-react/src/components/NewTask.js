@@ -7,7 +7,12 @@ function NewTask({ setShowNewTask, getTasks }) {
   const [deadline, setDeadline] = useState('')
 
   function handleSubmit (e) {
-    postTask()
+    if (title == '' || description == '' || deadline == '') {
+      alert("Fields cannot be empty")
+      return;
+    } else {
+      postTask()
+    }
   }
 
   function postTask() {
