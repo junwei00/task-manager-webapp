@@ -69,7 +69,7 @@ function App() {
   
   return (
     <div className="App">
-      <Sidebar tagList={tagList}/>
+      <Sidebar tagList={tagList} getTags={getTags}/>
       <div className='Main'>
         <Topbar handleSearch={handleSearch} handleSort={handleSort} 
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
