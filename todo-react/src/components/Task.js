@@ -117,9 +117,11 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
     <div className={className}>
       <div className="Header">
          <h3 className="Title">{task.title} </h3>
-         { task.tags.map((tag, index) => {
-           return <Tag key={index} index={index} tag={tag} refreshDeletedTaskTag={refreshDeletedTaskTag} task={task}/>
-         }) }
+         <div className="TagsBar">
+            {task.tags.map((tag, index) => {
+             return <Tag key={index} index={index} tag={tag} refreshDeletedTaskTag={refreshDeletedTaskTag} task={task}/>
+          })} 
+         </div>
          <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-" : "+"}</h3>
          {showTagTask? <TagTask task={task} tagList={tagList} refreshTaskTags={refreshTaskTags}/> : ""}
       </div>

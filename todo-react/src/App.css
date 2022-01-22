@@ -200,7 +200,6 @@
   color: crimson;
 }
 
-
 .Task-done {
   border: 3px solid green;
 }
@@ -223,6 +222,12 @@
   padding-right: 18px;
   height: fit-content;
   font-weight: 500;
+}
+
+.Task .TagsBar {
+  display: inline-flex;
+  max-width: 60%;
+  flex-wrap: wrap;
 }
 
 .Task .TagName:hover {
@@ -268,6 +273,7 @@
 .Task .Title {
   text-align: left;
   margin-right: 5px;
+  max-width: 35%;
 }
 
 .Task h3 {

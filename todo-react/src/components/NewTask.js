@@ -8,6 +8,7 @@ function NewTask({ setShowNewTask, getTasks }) {
   const [formValid, setFormValid] = useState(false)
 
   function handleSubmit (e) {
+    e.preventDefault()
     postTask()
   }
 

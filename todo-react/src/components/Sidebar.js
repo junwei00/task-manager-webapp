@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from "axios"
 
-function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, taskList }) {
+function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, taskList, handleSort }) {
 
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)
@@ -24,7 +24,11 @@ function Sidebar({ tagList, getTags, filterTasksByTag, setFilteredTaskList, task
 
   function handleKeyDown(e) {
     if (e.key === 'Enter') {
-      postTag()
+      if (newtagName.length > 10) {
+        alert('Please use tags with a maximum of 10 characters')
+      } else {
+        postTag()
+      }
     }
   }
 

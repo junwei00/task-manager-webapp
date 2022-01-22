@@ -8,7 +8,7 @@ function Topbar({ handleSearch, handleSort, buttonState, onClickNewTask }) {
         id="Searchbar"
         type='text'
         placeholder='Search...'/>
-      <select onChange={e => handleSort(e)}>
+      <select onChange={e => handleSort(e.target.value)}>
         <option>Created</option>
         <option>Edited</option>
         <option>Deadline</option>

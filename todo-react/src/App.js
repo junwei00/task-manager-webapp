@@ -12,12 +12,14 @@ function App() {
   const [taggedTaskList, setTaggedTaskList] = useState([])
   const [filteredTaskList, setFilteredTaskList] = useState([])
   const [tagList, setTagList] = useState([])
+  const [currentSort, setCurrentSort] = useState('Created')
 
   function getTasks() {
     axios
       .get("/api/tasks")
       .then((res) => {
         setTaskList(res.data)
+        setTaggedTaskList(res.data)
         setFilteredTaskList(res.data)
       })
       .catch((error) => console.log(error))
@@ -32,6 +34,15 @@ function App() {
       .catch((error) => console.log(error))
   }
 
+  function getTags() {
+    axios
+      .get("/api/tags")
+      .then((res) => {
+        setTagList(res.data)
+      })
+      .catch((error) => console.log(error))
+  }
+
   function filterTasksByTag(id) {
     let result = []
     result = taskList.filter((task) => {
@@ -40,15 +51,6 @@ function App() {
     })
     setTaggedTaskList(result)
     setFilteredTaskList(result)
-  }
-
-  function getTags() {
-    axios
-      .get("/api/tags")
-      .then((res) => {
-        setTagList(res.data)
-      })
-      .catch((error) => console.log(error))
   }
 
   function handleSearch(e) {
@@ -60,8 +62,7 @@ function App() {
     setFilteredTaskList(result)
   }
 
-  function handleSort(e) {
-    let sortBy = e.target.value
+  function handleSort(sortBy) {
     let result = [...filteredTaskList]
     if (sortBy == "Created") {
       result.sort((task1, task2) => 
@@ -84,7 +85,7 @@ function App() {
       result.sort((task1, task2) => 
         task1.title.localeCompare(task2.title))
     } else {
-      console.log("Error: Unknown sorting case")
+      console.log("Error: Unknown sorting case:" + sortBy)
     }
     setFilteredTaskList(result)
   }

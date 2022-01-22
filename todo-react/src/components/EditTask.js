@@ -62,7 +62,7 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
         <input
           type='date'
           placeholder='Deadline'
-          value={deadline}
+          value={deadline === null ? '' : deadline}
           onChange={(e) => {
             validateForm()
             setDeadline(e.target.value)}}
