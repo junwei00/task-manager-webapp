@@ -9,6 +9,7 @@ import NewTask from './components/NewTask'
 function App() {
   const [showNewTask, setShowNewTask] = useState(false)
   const [taskList, setTaskList] = useState([])
+  const [taggedTaskList, setTaggedTaskList] = useState([])
   const [filteredTaskList, setFilteredTaskList] = useState([])
   const [tagList, setTagList] = useState([])
 
@@ -37,6 +38,7 @@ function App() {
       let tags = task.tags.map((tag) => {return tag.id})
       return tags.includes(id)
     })
+    setTaggedTaskList(result)
     setFilteredTaskList(result)
   }
 
@@ -52,7 +54,7 @@ function App() {
   function handleSearch(e) {
     let searchTerm = e.target.value.toLowerCase()
     let result = []
-    result = taskList.filter((task) =>
+    result = taggedTaskList.filter((task) =>
       task.title.toLowerCase().search(searchTerm) != -1
     )
     setFilteredTaskList(result)
@@ -101,7 +103,8 @@ function App() {
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
         {showNewTask && <NewTask setShowNewTask={setShowNewTask} getTasks={getTasks}/> }
         <Tasks setTaskList={setTaskList} setFilteredTaskList={setFilteredTaskList} 
-          tagList={tagList} filteredTaskList={filteredTaskList} getTags={() => getTags()}/>
+          tagList={tagList} filteredTaskList={filteredTaskList} getTags={() => getTags()}
+          setTaggedTaskList={setTaggedTaskList}/>
       </div>
     </div>
   );

@@ -38,6 +38,7 @@ function NewTask({ setShowNewTask, getTasks }) {
 
   return (
     <form className="NewTask" onSubmit={handleSubmit}>
+      <h3>New Task:</h3>
       <div>
         <input
           type='text'

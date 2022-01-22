@@ -35,6 +35,7 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
 
   return (
     <form className="EditTask" onSubmit={handleSubmit}>
+      <h3>Edit Task:</h3>
       <div>
         <input
           type='text'

@@ -4,7 +4,7 @@ import EditTask from "./EditTask";
 import TagTask from "./TagTask";
 import Tag from "./Tag"
 
-function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaskList, tagList, getTags}) {
+function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTaskList, setTaskList, tagList, getTags}) {
   const [showEditTask, setShowEditTask] = useState(false)
   const [showTagTask, setShowTagTask] = useState(false)
 
@@ -15,6 +15,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaskList
         let newTaskList = [...filteredTaskList]
         newTaskList[index] = res.data
         setFilteredTaskList(newTaskList)
+        setTaggedTaskList(newTaskList)
         refreshTasklist()
         getTags()
       })
@@ -46,6 +47,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaskList
     axios
       .put(`/api/tasks/${task.id}`, data)
       .then((res) => {
+        task.status = 'flagged'
         refreshTask()
       })
       .catch((error) => console.log(error))

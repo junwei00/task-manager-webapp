@@ -8,6 +8,7 @@ function TagTask({ task, tagList, refreshTask }) {
         task: task.id
       })
       .then((res) => {
+        task.tags.push(tag)
         refreshTask()
       })
       .catch((error) => console.log(error))

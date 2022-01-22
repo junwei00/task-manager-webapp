@@ -1,25 +1,23 @@
 import Task from './Task'
+import { useState } from 'react'
 
-function Tasks({ setTaskList, setFilteredTaskList, filteredTaskList, tagList, getTags}) {
+function Tasks({ setTaskList, setFilteredTaskList, filteredTaskList, tagList, getTags, setTaggedTaskList }) {
   return (
     <div className="Tasks">
-      <h2>My Tasks</h2>
       {filteredTaskList.map((task, index) => {
-        let thisTask = <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
-                        filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
-                        tagList={tagList} getTags={getTags}/>
         if (!(task.status == "done")) {
-          return thisTask
+          return <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
+            filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
+            tagList={tagList} getTags={getTags} setTaggedTaskList={setTaggedTaskList}/>
         }
       })}
       {filteredTaskList.map((task, index) => {
-        let thisTask = <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
-                        filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
-                        tagList={tagList} getTags={getTags}/>
         if (task.status == "done") {
-          return thisTask
+          return <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
+            filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
+            tagList={tagList} getTags={getTags} setTaggedTaskList={setTaggedTaskList}/>
         }
-      })}
+    })}
     </div>
   );
 }

@@ -1,9 +1,9 @@
 :root{
-  --color1: #EAE7DC;
-  --color2: #D8C3A5;
-  --color3: #8E8D8A;
-  --color4: #E98074;
-  --color5: #E85A4F;
+  --color1: #264653;
+  --color2: #2A9D8F;
+  --color3: #E9C46A;
+  --color4: #F4A261;
+  --color5: #E76F51;
 }
 
 .App {
@@ -95,7 +95,7 @@
   background-color: lightgray;
 }
 
-.Sidebar a {
+.Sidebar li {
   padding: 3px 8px 3px 16px;
   text-decoration: none;
   font-size: 25px;
@@ -104,13 +104,8 @@
   cursor: pointer;
 }
 
-.Sidebar li {
-  padding: 3px 8px 3px 16px;
-  text-decoration: none;
-  font-size: 25px;
-  display: block;
-  color:black;
-  cursor: pointer;
+.Sidebar .Tag:active:hover {
+  background-color: steelblue;
 }
 
 .Sidebar .Tag:hover {
@@ -194,14 +189,25 @@
   margin: 7px 7px 7px 7px;
   padding: 10px 10px 10px 10px;
   border: 3px solid black;
+  border-radius: 5px;
 }
 
 .Task-flagged {
   border: 3px solid red;
 }
 
+.Task-flagged .Title{
+  color: crimson;
+}
+
+
 .Task-done {
   border: 3px solid green;
+}
+
+.Task-done .Title {
+  text-decoration: line-through;
+  color: gray;
 }
 
 .Task .Header {
@@ -304,6 +310,15 @@
   margin-top: 20px;
   width: 60%;
   margin-inline: auto;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding-block: 10px;
+  padding-left: 10px;
+  padding-right: 17px;
+}
+
+.NewTask h3, .EditTask h3 {
+  font-size: 25px;
 }
 
 .NewTask *, .EditTask * {
