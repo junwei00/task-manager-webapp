@@ -49,6 +49,24 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
     getTags()
   }
 
+  function refreshTaskTags(newtag) {
+    let newTaskList = [...filteredTaskList]
+    newTaskList[index].tags.push(newtag)
+    setFilteredTaskList(newTaskList)
+    setTaggedTaskList(newTaskList)
+    refreshTasklist()
+    getTags()
+  }
+
+  function refreshDeletedTaskTag(tagindex) {
+    let newTaskList = [...filteredTaskList]
+    newTaskList[index].tags.splice(tagindex, 1)
+    setFilteredTaskList(newTaskList)
+    setTaggedTaskList(newTaskList)
+    refreshTasklist()
+    getTags()
+  }
+
   function deleteTask() {
     axios
       .delete(`/api/tasks/${task.id}`)
@@ -100,10 +118,10 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
       <div className="Header">
          <h3 className="Title">{task.title} </h3>
          { task.tags.map((tag, index) => {
-           return <Tag key={index} tag={tag} refreshTask={() => refreshTask()} task={task}/>
+           return <Tag key={index} index={index} tag={tag} refreshDeletedTaskTag={refreshDeletedTaskTag} task={task}/>
          }) }
          <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-" : "+"}</h3>
-         {showTagTask? <TagTask task={task} tagList={tagList} refreshTask={() => refreshTask()}/> : ""}
+         {showTagTask? <TagTask task={task} tagList={tagList} refreshTaskTags={refreshTaskTags}/> : ""}
       </div>
       <h4 className="Deadline">Deadline: {task.deadline === null ? "None" : task.deadline}</h4>
       <p>{task.description}</p>

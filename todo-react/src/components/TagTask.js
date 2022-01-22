@@ -1,6 +1,6 @@
 import axios from "axios";
 
-function TagTask({ task, tagList, refreshTask }) {
+function TagTask({ task, tagList, refreshTaskTags }) {
   function addTaskToTag(tag) {
     axios
       .put(`/api/tags/${tag.id}`, {
@@ -8,8 +8,7 @@ function TagTask({ task, tagList, refreshTask }) {
         task: task.id
       })
       .then((res) => {
-        task.tags.push(tag)
-        refreshTask()
+        refreshTaskTags(tag)
       })
       .catch((error) => console.log(error))
   }

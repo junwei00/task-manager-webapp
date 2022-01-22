@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-function Tag({ tag, refreshTask, task }) {
+function Tag({ index, tag, refreshDeletedTaskTag, task }) {
   const [isHover, setIsHover] = useState(false)
 
   function deleteTagFromTask() {
@@ -11,7 +11,7 @@ function Tag({ tag, refreshTask, task }) {
         task: task.id
       })
       .then((res) => {
-        refreshTask()
+        refreshDeletedTaskTag(index)
       })
       .catch((error) => console.log(error))
   }
