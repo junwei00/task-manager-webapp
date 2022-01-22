@@ -98,7 +98,7 @@
 .Sidebar li {
   padding: 3px 8px 3px 16px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 23px;
   display: block;
   color:black;
   cursor: pointer;
@@ -335,4 +335,35 @@
 
 .NewTask .Description, .EditTask .Description{
   height: 100px;
+}
+
+.Users {
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  border: 3px solid black;
+  border-radius: 5px;
+  z-index: 2;
+  background: var(--color4);
+}
+
+.Users h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.Users li {
+  list-style: none;
+  font-size: 25px;
+  cursor: pointer;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.Users li:hover {
+  color: var(--color2);
+  font-weight: bold;
 }

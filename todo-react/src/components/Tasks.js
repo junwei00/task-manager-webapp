@@ -5,14 +5,14 @@ function Tasks({ setTaskList, setFilteredTaskList, filteredTaskList, tagList, ge
   return (
     <div className="Tasks">
       {filteredTaskList.map((task, index) => {
-        if (!(task.status == "done")) {
+        if (task.status !== "done") {
           return <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
             filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
             tagList={tagList} getTags={getTags} setTaggedTaskList={setTaggedTaskList}/>
         }
       })}
       {filteredTaskList.map((task, index) => {
-        if (task.status == "done") {
+        if (task.status === "done") {
           return <Task key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
             filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
             tagList={tagList} getTags={getTags} setTaggedTaskList={setTaggedTaskList}/>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from "axios"
 
-function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList }) {
+function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList, currentUser }) {
 
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)
@@ -62,6 +62,9 @@ function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList 
 
   return (
     <div className='Sidebar'>
+      <div className='userProfile'>
+        {currentUser !== null && <h2>{currentUser.username}</h2>}
+      </div>
       <div className={currentTag == -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
           resetTagFilter()
           setCurrentTag(-1)
@@ -104,7 +107,7 @@ function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList 
         {showEdittag ? "Close" : "Edit"}
       </li>
       </div>
-      {showNewtag ? newtagInput : ""}
+      {showNewtag ? newtagInput : null}
     </div>
   );
 }

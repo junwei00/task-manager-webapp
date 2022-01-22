@@ -5,6 +5,7 @@ import Tasks from './components/Tasks'
 import Topbar from './components/Topbar'
 import Sidebar from './components/Sidebar'
 import NewTask from './components/NewTask'
+import Users from './components/Users'
 
 function App() {
   const [showNewTask, setShowNewTask] = useState(false)
@@ -13,6 +14,8 @@ function App() {
   const [filteredTaskList, setFilteredTaskList] = useState([])
   const [tagList, setTagList] = useState([])
   const [currentSort, setCurrentSort] = useState('Created')
+  const [userList, setUserList] = useState([])
+  const [currentUser, setCurrentUser] = useState(null)
 
   function getTasks() {
     axios
@@ -30,6 +33,15 @@ function App() {
       .get("/api/tags")
       .then((res) => {
         setTagList(res.data)
+      })
+      .catch((error) => console.log(error))
+  }
+
+  function getUsers() {
+    axios
+      .get("/api/users")
+      .then((res) => {
+        setUserList(res.data)
       })
       .catch((error) => console.log(error))
   }
@@ -98,12 +110,17 @@ function App() {
   useEffect(() => {
     getTasks()
     getTags()
+    getUsers()
   }, [])
 
   return (
     <div className="App">
+      {
+        (currentUser === null)
+        && <Users userList={userList} setCurrentUser={setCurrentUser}/>
+      }
       <Sidebar tagList={tagList} getTags={getTags} filterTasksByTag={filterTasksByTag}
-        resetTagFilter={resetTagFilter} taskList={taskList}/>
+        resetTagFilter={resetTagFilter} taskList={taskList} currentUser={currentUser} />
       <div className='Main'>
         <Topbar handleSearch={handleSearch} handleSort={handleSort} 
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />

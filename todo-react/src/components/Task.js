@@ -123,7 +123,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
           })} 
          </div>
          <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-" : "+"}</h3>
-         {showTagTask? <TagTask task={task} tagList={tagList} refreshTaskTags={refreshTaskTags}/> : ""}
+         {showTagTask && <TagTask task={task} tagList={tagList} refreshTaskTags={refreshTaskTags}/>}
       </div>
       <h4 className="Deadline">Deadline: {task.deadline === null ? "None" : task.deadline}</h4>
       <p>{task.description}</p>
