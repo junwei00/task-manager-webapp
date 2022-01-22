@@ -49,8 +49,13 @@ function App() {
       let tags = task.tags.map((tag) => {return tag.id})
       return tags.includes(id)
     })
+    result = sortTasks('Current', result)
     setTaggedTaskList(result)
     setFilteredTaskList(result)
+  }
+
+  function resetTagFilter() {
+    setFilteredTaskList(sortTasks('Current', taskList))
   }
 
   function handleSearch(e) {
@@ -63,7 +68,16 @@ function App() {
   }
 
   function handleSort(sortBy) {
-    let result = [...filteredTaskList]
+    setFilteredTaskList(sortTasks(sortBy, filteredTaskList))
+  }
+
+  function sortTasks(sortBy, list) {
+    if (sortBy === 'Current') {
+      sortBy = currentSort
+    } else {
+      setCurrentSort(sortBy)
+    }
+    let result = [...list]
     if (sortBy == "Created") {
       result.sort((task1, task2) => 
         {if (task1.created_at > task2.created_at) return -1
@@ -87,7 +101,7 @@ function App() {
     } else {
       console.log("Error: Unknown sorting case:" + sortBy)
     }
-    setFilteredTaskList(result)
+    return result
   }
 
   useEffect(() => {
@@ -98,7 +112,7 @@ function App() {
   return (
     <div className="App">
       <Sidebar tagList={tagList} getTags={getTags} filterTasksByTag={filterTasksByTag}
-        setFilteredTaskList={setFilteredTaskList} taskList={taskList}/>
+        resetTagFilter={resetTagFilter} taskList={taskList}/>
       <div className='Main'>
         <Topbar handleSearch={handleSearch} handleSort={handleSort} 
           buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
