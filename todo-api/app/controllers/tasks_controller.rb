@@ -4,6 +4,12 @@ class TasksController < ApplicationController
     render :json => tasks.to_json(:include => [:tags])
   end
 
+  def index_user
+    user = User.find(params[:user_id])
+    tasks = user.tasks
+    render :json => tasks.to_json(:include => [:tags])
+  end
+
   def show
     task = Task.find(params[:id])
     render :json => task.to_json(:include => [:tags])
@@ -11,6 +17,13 @@ class TasksController < ApplicationController
 
   def create
     task = Task.create(task_params)
+    render json: task
+  end
+
+  def create_user
+    user = User.find(params[:user_id])
+    task = Task.create(task_params)
+    user.tasks << task
     render json: task
   end
 

@@ -4,6 +4,12 @@ class TagsController < ApplicationController
         render :json => tags.to_json(:include => [:tasks])
     end
 
+    def index_user
+        user = User.find(params[:user_id])
+        tags = user.tags
+        render :json => tags.to_json(:include => [:tasks])
+    end
+
     def show
         tag = Tag.find(params[:id])
         render :json => tag.to_json(:include => [:tasks])
@@ -16,7 +22,15 @@ class TagsController < ApplicationController
 
     def create
         tag = Tag.create(tag_params)
+        render :json => tag.to_json()
     end 
+
+    def create_user
+        user = User.find(params[:user_id])
+        tag = Tag.create(tag_params)
+        user.tags << tag
+        render :json => tag.to_json()
+    end
 
     def destroy
         tag = Tag.find(params[:id])

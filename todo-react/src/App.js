@@ -25,15 +25,6 @@ function App() {
       .catch((error) => console.log(error))
   }
 
-  function getTasksByTag(id) {
-    axios
-      .get(`/api/tags/${id}/tasks`)
-      .then((res) => {
-        setFilteredTaskList(res.data)
-      })
-      .catch((error) => console.log(error))
-  }
-
   function getTags() {
     axios
       .get("/api/tags")
