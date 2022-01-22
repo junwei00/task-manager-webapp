@@ -8,6 +8,7 @@ function EditTask({ task, refreshTask, setShowEditTask }) {
   const [formValid, setFormValid] = useState(false)
 
   const handleSubmit = (e) => {
+    e.preventDefault()
     patchTask()
   }
 

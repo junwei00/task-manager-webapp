@@ -31,36 +31,53 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
       .catch((error) => console.log(error))
   }
 
+  function refreshDeletedTask() {
+    let newTaskList = [...filteredTaskList]
+    newTaskList.splice(index, 1)
+    setFilteredTaskList(newTaskList)
+    setTaggedTaskList(newTaskList)
+    refreshTasklist()
+    getTags()
+  }
+
+  function refreshTaskStatus(newstatus) {
+    let newTaskList = [...filteredTaskList]
+    newTaskList[index].status = newstatus
+    setFilteredTaskList(newTaskList)
+    setTaggedTaskList(newTaskList)
+    refreshTasklist()
+    getTags()
+  }
+
   function deleteTask() {
     axios
       .delete(`/api/tasks/${task.id}`)
       .then((res) => {
-        refreshTask()
+        refreshDeletedTask()
       })
       .catch((error) => console.log(error))
   }
 
   function toggleFlagTask() {
-    let data = (task.status == "flagged")
-               ? {status: null}
-               : {status: "flagged"}
+    let newstatus = (task.status == "flagged")
+               ? null
+               : 'flagged'
     axios
-      .put(`/api/tasks/${task.id}`, data)
+      .put(`/api/tasks/${task.id}`, {status: newstatus})
       .then((res) => {
-        task.status = 'flagged'
-        refreshTask()
+        refreshTaskStatus(newstatus)
       })
       .catch((error) => console.log(error))
   }
 
   function toggleDoneTask() {
-    let data = (task.status == "done")
-               ? {status: null}
-               : {status: "done"}
+    let newstatus = (task.status == "done")
+               ? null
+               : 'done'
     axios
-      .put(`/api/tasks/${task.id}`, data)
+      .put(`/api/tasks/${task.id}`, {status: newstatus})
       .then((res) => {
-        refreshTask()
+        refreshTaskStatus(newstatus)
       })
       .catch((error) => console.log(error))    
   }
