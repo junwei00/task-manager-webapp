@@ -19,6 +19,6 @@ The React frontend (todo-react) is a single page application that handles the so
 
 ## Running the Development Server
 
-The development server was tested on Ubuntu 20.04 LTS. 
+The development server was tested on Ubuntu 20.04 LTS. <br/>
 Start the Rails api server: `cd todo-api && rails s` <br/>
 Start the React app: `cd todo-react && yarn start` <br/>
