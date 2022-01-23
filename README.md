@@ -4,11 +4,11 @@
 
 This is a submission for the NUS Computing for Voluntary Welfare Organisations (CVWO), AY21/22.
 
-Name: Moo Jun Wei
+Name: Moo Jun Wei <br/>
 Matriculation Number: A0239015L
 
-A working demo of the application can be found at https://61ed325983f671927a0b43c7--lucid-wescoff-daa7eb.netlify.app/.
-The user manual for this webapp can be found in this repository as User_Manual.pdf.
+A working demo of the application can be found at https://61ed325983f671927a0b43c7--lucid-wescoff-daa7eb.netlify.app/. <br/>
+The user manual for this webapp can be found in this repository as User_Manual.pdf. <br />
 Mid and Final submission writeups can be found in this repository as Mid_Submission.pdf and Final_Submission.pdf.
 
 # Overview
