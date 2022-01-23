@@ -111,30 +111,26 @@ function App() {
   }
 
   function refreshTask(updatedTask) {
-    let newFilteredTaskList =
-      filteredTaskList.map((task) => {
+    function newList(oldList) {
+      return oldList.map((task) => {
         return (
           (task.id === updatedTask.id)
           ? updatedTask
-          : task)
-      })
-    setFilteredTaskList(newFilteredTaskList)
-    let newTaggedTaskList =
-      taggedTaskList.map((task) => {
-        return (
-          (task.id === updatedTask.id)
-          ? updatedTask
-          : task)
-      })
-    setTaggedTaskList(newTaggedTaskList)
-    let newTaskList =
-      taskList.map((task) => {
-        return (
-          (task.id === updatedTask.id)
-          ? updatedTask
-          : task)
-      })
-    setTaskList(newTaskList)
+          : task)})
+    }
+    setFilteredTaskList(newList(filteredTaskList))
+    setTaggedTaskList(newList(taggedTaskList))
+    setTaskList(newList(taskList))
+  }
+
+  function refreshDeletedTask(deletedTask) {
+    function newList(oldList) {
+      return oldList.filter((task) => {
+        return (task.id !== deletedTask.id)})
+    }
+    setFilteredTaskList(newList(filteredTaskList))
+    setTaggedTaskList(newList(taggedTaskList))
+    setTaskList(newList(taskList))
   }
 
   const mainPage = 
@@ -160,14 +156,11 @@ function App() {
             setShowNewTask={setShowNewTask} 
             getUserTasks={getUserTasks} />}
         <Tasks 
-          currentUserId={currentUserId}
-          setTaskList={setTaskList} 
-          setFilteredTaskList={setFilteredTaskList} 
           tagList={tagList} 
           filteredTaskList={filteredTaskList} 
           getUserTags={() => getUserTags()}
-          setTaggedTaskList={setTaggedTaskList}
-          refreshTask={refreshTask} />
+          refreshTask={refreshTask} 
+          refreshDeletedTask={refreshDeletedTask} />
       </div>
     </div>
 
@@ -176,7 +169,6 @@ function App() {
     if (currentUserId !== -1) {
       getUserTasks()
       getUserTags()
-      console.log('User load')
     }
   }, [currentUserId])
 

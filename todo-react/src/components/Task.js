@@ -4,74 +4,15 @@ import EditTask from "./EditTask";
 import TagTask from "./TagTask";
 import Tag from "./Tag"
 
-function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskList, setTaggedTaskList, setTaskList, tagList, getUserTags, refreshTask}) {
+function Task({ index, task, tagList, getUserTags, refreshTaskNew, refreshDeletedTaskNew }) {
   const [showEditTask, setShowEditTask] = useState(false)
   const [showTagTask, setShowTagTask] = useState(false)
-
-  function refreshTask() {
-    axios
-      .get(`/api/tasks/${task.id}`)
-      .then((res) => {
-        let newTaskList = [...filteredTaskList]
-        newTaskList[index] = res.data
-        setFilteredTaskList(newTaskList)
-        setTaggedTaskList(newTaskList)
-        refreshTasklist()
-        getUserTags()
-      })
-      .catch((error) => console.log(error))
-  }
-
-  function refreshTasklist() {
-    axios
-      .get(`/api/${currentUserId}/tasks`)
-      .then((res) => {
-        setTaskList(res.data)
-      })
-      .catch((error) => console.log(error))
-  }
-
-  function refreshDeletedTask() {
-    let newTaskList = [...filteredTaskList]
-    newTaskList.splice(index, 1)
-    setFilteredTaskList(newTaskList)
-    setTaggedTaskList(newTaskList)
-    refreshTasklist()
-    getUserTags()
-  }
-
-  function refreshTaskStatus(newstatus) {
-    let newTaskList = [...filteredTaskList]
-    newTaskList[index].status = newstatus
-    setFilteredTaskList(newTaskList)
-    setTaggedTaskList(newTaskList)
-    refreshTasklist()
-    getUserTags()
-  }
-
-  function refreshTaskTags(newtag) {
-    let newTaskList = [...filteredTaskList]
-    newTaskList[index].tags.push(newtag)
-    setFilteredTaskList(newTaskList)
-    setTaggedTaskList(newTaskList)
-    refreshTasklist()
-    getUserTags()
-  }
-
-  function refreshDeletedTaskTag(tagindex) {
-    let newTaskList = [...filteredTaskList]
-    newTaskList[index].tags.splice(tagindex, 1)
-    setFilteredTaskList(newTaskList)
-    setTaggedTaskList(newTaskList)
-    refreshTasklist()
-    getUserTags()
-  }
 
   function deleteTask() {
     axios
       .delete(`/api/tasks/${task.id}`)
       .then((res) => {
-        refreshDeletedTask()
+        refreshDeletedTaskNew(task)
       })
       .catch((error) => console.log(error))
   }
@@ -83,7 +24,7 @@ function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskLi
     axios
       .put(`/api/tasks/${task.id}`, {status: newstatus})
       .then((res) => {
-        refreshTaskStatus(newstatus)
+        refreshTaskNew(res.data)
       })
       .catch((error) => console.log(error))
   }
@@ -95,7 +36,7 @@ function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskLi
     axios
       .put(`/api/tasks/${task.id}`, {status: newstatus})
       .then((res) => {
-        refreshTaskStatus(newstatus)
+        refreshTaskNew(res.data)
       })
       .catch((error) => console.log(error))    
   }
@@ -114,11 +55,22 @@ function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskLi
          <h3 className="Title">{task.title} </h3>
          <div className="TagsBar">
             {task.tags.map((tag, index) => {
-             return <Tag key={index} index={index} tag={tag} refreshDeletedTaskTag={refreshDeletedTaskTag} task={task}/>
+             return (
+              <Tag 
+                key={index} 
+                tag={tag} 
+                task={task}
+                getUserTags={getUserTags}
+                refreshTaskNew={refreshTaskNew}/>)
           })} 
          </div>
          <h3 className="AddTagToTask" onClick={() => setShowTagTask(!showTagTask)}>{showTagTask ? "-" : "+"}</h3>
-         {showTagTask && <TagTask task={task} tagList={tagList} refreshTaskTags={refreshTaskTags}/>}
+         {showTagTask && 
+          <TagTask 
+            task={task} 
+            tagList={tagList} 
+            getUserTags={getUserTags}
+            refreshTaskNew={refreshTaskNew} />}
       </div>
       <h4 className="Deadline">Deadline: {task.deadline === null ? "None" : task.deadline}</h4>
       <p>{task.description}</p>
@@ -136,8 +88,13 @@ function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskLi
         Delete
         </button>
       </div>
-      {showEditTask && <EditTask task={task} index={index} refreshTask={() => refreshTask()} 
-        setShowEditTask={setShowEditTask} />}
+      {showEditTask && 
+        <EditTask 
+          task={task} 
+          index={index} 
+          setShowEditTask={setShowEditTask} 
+          refreshTaskNew={refreshTaskNew}
+          getUserTags={getUserTags} />}
     </div>
   );
 }

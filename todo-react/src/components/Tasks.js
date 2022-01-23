@@ -1,21 +1,33 @@
 import Task from './Task'
 import { useState } from 'react'
 
-function Tasks({ currentUserId, setTaskList, setFilteredTaskList, filteredTaskList, tagList, getUserTags, setTaggedTaskList, refreshTask }) {
+function Tasks({ filteredTaskList, tagList, getUserTags, refreshTask, refreshDeletedTask }) {
   return (
     <div className="Tasks">
       {filteredTaskList.map((task, index) => {
         if (task.status !== "done") {
-          return <Task currentUserId={currentUserId} key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
-            filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
-            tagList={tagList} getUserTags={getUserTags} setTaggedTaskList={setTaggedTaskList} refreshTask={refreshTask}/>
+          return (
+            <Task 
+              key={task.id} 
+              index={index} 
+              task={task} 
+              tagList={tagList} 
+              getUserTags={getUserTags}  
+              refreshTaskNew={refreshTask}
+              refreshDeletedTaskNew={refreshDeletedTask} />)
         }
       })}
       {filteredTaskList.map((task, index) => {
         if (task.status === "done") {
-          return <Task currentUserId={currentUserId} key={task.id} index={index} setFilteredTaskList={setFilteredTaskList} 
-            filteredTaskList={filteredTaskList} task={task} setTaskList={setTaskList}
-            tagList={tagList} getUserTags={getUserTags} setTaggedTaskList={setTaggedTaskList} refreshTask={refreshTask}/>
+          return (
+            <Task 
+              key={task.id} 
+              index={index} 
+              task={task} 
+              tagList={tagList} 
+              getUserTags={getUserTags}  
+              refreshTaskNew={refreshTask}
+              refreshDeletedTaskNew={refreshDeletedTask} />)
         }
     })}
     </div>

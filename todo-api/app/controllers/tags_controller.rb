@@ -42,11 +42,13 @@ class TagsController < ApplicationController
         tag = Tag.find(params[:id])
 
         if (params[:do].eql? "add")
-            tag.tasks << Task.find(params[:task])
-            render :json => tag.to_json(:include => [:tasks])
+            task = Task.find(params[:task])
+            tag.tasks << task
+            render :json => task.to_json(:include => [:tags])
         elsif (params[:do].eql? "delete")
-            tag.tasks.delete(Task.find(params[:task]))
-            render :json => tag.to_json(:include => [:tasks])
+            task = Task.find(params[:task])
+            tag.tasks.delete(task)
+            render :json => task.to_json(:include => [:tags])
         else 
             render :json => {"unknown":params[:do]}
         end
