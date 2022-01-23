@@ -13,8 +13,8 @@ Mid and Final submission writeups can be found in this repository as Mid_Submiss
 
 ## Overview
 
-This is a task management application capable of tagging, searching, sorting, and handling multiple user profiles. 
-The Rails backend (todo-api) consists of 3 models - the User, Task, and Tag, and corresponding controllers for each. There is a one-to-many relationship from users to tasks and from users to tags, and there is a many-to-many relationship from tasks to tags.
+This is a task management application capable of tagging, searching, sorting, and handling multiple user profiles. <br/>
+The Rails backend (todo-api) consists of 3 models - the User, Task, and Tag, and corresponding controllers for each. There is a one-to-many relationship from users to tasks and from users to tags, and there is a many-to-many relationship from tasks to tags. <br/>
 The React frontend (todo-react) is a single page application that handles the sorting, searching, and dynamic updates to the list of tasks. 
 
 ## Screenshots
