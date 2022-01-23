@@ -17,6 +17,11 @@ This is a task management application capable of tagging, searching, sorting, an
 The Rails backend (todo-api) consists of 3 models - the User, Task, and Tag, and corresponding controllers for each. There is a one-to-many relationship from users to tasks and from users to tags, and there is a many-to-many relationship from tasks to tags.
 The React frontend (todo-react) is a single page application that handles the sorting, searching, and dynamic updates to the list of tasks. 
 
+## Screenshots
+
+![Screenshot 1](/images/screenshot_1.PNG)
+![Screenshot 2](/images/screenshot_2.PNG)
+
 ## Running the Development Server
 
 The development server was tested on Ubuntu 20.04 LTS. <br/>
