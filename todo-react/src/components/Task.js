@@ -4,7 +4,7 @@ import EditTask from "./EditTask";
 import TagTask from "./TagTask";
 import Tag from "./Tag"
 
-function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskList, setTaggedTaskList, setTaskList, tagList, getUserTags}) {
+function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskList, setTaggedTaskList, setTaskList, tagList, getUserTags, refreshTask}) {
   const [showEditTask, setShowEditTask] = useState(false)
   const [showTagTask, setShowTagTask] = useState(false)
 

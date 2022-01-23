@@ -1,6 +1,6 @@
 class TagsController < ApplicationController
     def index
-        tags = Tag.order("created_at DESC")
+        tags = Tag.all
         render :json => tags.to_json(:include => [:tasks])
     end
 
@@ -22,14 +22,14 @@ class TagsController < ApplicationController
 
     def create
         tag = Tag.create(tag_params)
-        render :json => tag.to_json()
+        render :json => tag.to_json(:include => [:tasks])
     end 
 
     def create_user
         user = User.find(params[:user_id])
         tag = Tag.create(tag_params)
         user.tags << tag
-        render :json => tag.to_json()
+        render :json => tag.to_json(:include => [:tasks])
     end
 
     def destroy

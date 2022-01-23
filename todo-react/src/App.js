@@ -109,7 +109,34 @@ function App() {
     }
     return result
   }
-  
+
+  function refreshTask(updatedTask) {
+    let newFilteredTaskList =
+      filteredTaskList.map((task) => {
+        return (
+          (task.id === updatedTask.id)
+          ? updatedTask
+          : task)
+      })
+    setFilteredTaskList(newFilteredTaskList)
+    let newTaggedTaskList =
+      taggedTaskList.map((task) => {
+        return (
+          (task.id === updatedTask.id)
+          ? updatedTask
+          : task)
+      })
+    setTaggedTaskList(newTaggedTaskList)
+    let newTaskList =
+      taskList.map((task) => {
+        return (
+          (task.id === updatedTask.id)
+          ? updatedTask
+          : task)
+      })
+    setTaskList(newTaskList)
+  }
+
   const mainPage = 
     <div>
       <Sidebar 
@@ -124,7 +151,7 @@ function App() {
       <div className='Main'>
         <Topbar 
           handleSearch={handleSearch} 
-          handleSort={handleSort} 
+          handleSort={handleSort}
           buttonState={showNewTask} 
           onClickNewTask={() => setShowNewTask(!showNewTask)} />
         {showNewTask && 
@@ -139,7 +166,8 @@ function App() {
           tagList={tagList} 
           filteredTaskList={filteredTaskList} 
           getUserTags={() => getUserTags()}
-          setTaggedTaskList={setTaggedTaskList} />
+          setTaggedTaskList={setTaggedTaskList}
+          refreshTask={refreshTask} />
       </div>
     </div>
 
