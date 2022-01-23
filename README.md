@@ -20,6 +20,7 @@ The React frontend (todo-react) is a single page application that handles the so
 ## Screenshots
 
 ![Screenshot 1](/images/screenshot_1.PNG)
+![Screenshot 2](/images/screenshot_2.PNG)
 
 ## Running the Development Server
 
