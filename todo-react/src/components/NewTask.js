@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 
-function NewTask({ setShowNewTask, getTasks }) {
+function NewTask({ currentUserId, setShowNewTask, getUserTasks }) {
   const [title, setTitle] = useState('')
   const [description, setDescription] = useState('')
   const [deadline, setDeadline] = useState('')
@@ -9,7 +9,7 @@ function NewTask({ setShowNewTask, getTasks }) {
 
   function handleSubmit (e) {
     e.preventDefault()
-    postTask()
+    postTaskUser()
   }
 
   function postTask() {
@@ -22,9 +22,26 @@ function NewTask({ setShowNewTask, getTasks }) {
       .then((res) => {
         setTitle('')
         setDescription('')
-        setDeadline(new Date())
+        setDeadline('')
         setShowNewTask(false)
-        getTasks()
+        getUserTasks()
+      })
+      .catch((error) => console.log(error))
+  }
+
+  function postTaskUser() {
+    axios
+      .post(`/api/${currentUserId}/tasks`, {
+        title: title,
+        description: description,
+        deadline: deadline
+      })
+      .then((res) => {
+        setTitle('')
+        setDescription('')
+        setDeadline('')
+        setShowNewTask(false)
+        getUserTasks()
       })
       .catch((error) => console.log(error))
   }

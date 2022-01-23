@@ -6,6 +6,7 @@ import Topbar from './components/Topbar'
 import Sidebar from './components/Sidebar'
 import NewTask from './components/NewTask'
 import Users from './components/Users'
+import EditUser from './components/EditUser'
 
 function App() {
   const [showNewTask, setShowNewTask] = useState(false)
@@ -15,11 +16,13 @@ function App() {
   const [tagList, setTagList] = useState([])
   const [currentSort, setCurrentSort] = useState('Created')
   const [userList, setUserList] = useState([])
-  const [currentUser, setCurrentUser] = useState(null)
+  const [currentUserId, setCurrentUserId] = useState(-1)
+  const [currentUsername, setCurrentUsername] = useState('')
+  const [showEditUser, setShowEditUser] = useState(false)
 
-  function getTasks() {
+  function getUserTasks() {
     axios
-      .get("/api/tasks")
+      .get(`/api/${currentUserId}/tasks`)
       .then((res) => {
         setTaskList(res.data)
         setTaggedTaskList(res.data)
@@ -28,9 +31,9 @@ function App() {
       .catch((error) => console.log(error))
   }
 
-  function getTags() {
+  function getUserTags() {
     axios
-      .get("/api/tags")
+      .get(`/api/${currentUserId}/tags`)
       .then((res) => {
         setTagList(res.data)
       })
@@ -106,29 +109,68 @@ function App() {
     }
     return result
   }
+  
+  const mainPage = 
+    <div>
+      <Sidebar 
+        currentUserId={currentUserId}
+        currentUsername={currentUsername} 
+        tagList={tagList} 
+        getUserTags={getUserTags} 
+        filterTasksByTag={filterTasksByTag}
+        resetTagFilter={resetTagFilter}
+        taskList={taskList} 
+        setShowEditUser={setShowEditUser}/>
+      <div className='Main'>
+        <Topbar 
+          handleSearch={handleSearch} 
+          handleSort={handleSort} 
+          buttonState={showNewTask} 
+          onClickNewTask={() => setShowNewTask(!showNewTask)} />
+        {showNewTask && 
+          <NewTask 
+            currentUserId={currentUserId}
+            setShowNewTask={setShowNewTask} 
+            getUserTasks={getUserTasks} />}
+        <Tasks 
+          currentUserId={currentUserId}
+          setTaskList={setTaskList} 
+          setFilteredTaskList={setFilteredTaskList} 
+          tagList={tagList} 
+          filteredTaskList={filteredTaskList} 
+          getUserTags={() => getUserTags()}
+          setTaggedTaskList={setTaggedTaskList} />
+      </div>
+    </div>
 
   useEffect(() => {
-    getTasks()
-    getTags()
     getUsers()
-  }, [])
+    if (currentUserId !== -1) {
+      getUserTasks()
+      getUserTags()
+      console.log('User load')
+    }
+  }, [currentUserId])
 
   return (
     <div className="App">
       {
-        (currentUser === null)
-        && <Users userList={userList} setCurrentUser={setCurrentUser}/>
+        (currentUserId === -1)
+        ? <Users 
+            userList={userList} 
+            setCurrentUserId={setCurrentUserId}
+            setCurrentUsername={setCurrentUsername}
+            getUsers={getUsers}/>
+        : mainPage
       }
-      <Sidebar tagList={tagList} getTags={getTags} filterTasksByTag={filterTasksByTag}
-        resetTagFilter={resetTagFilter} taskList={taskList} currentUser={currentUser} />
-      <div className='Main'>
-        <Topbar handleSearch={handleSearch} handleSort={handleSort} 
-          buttonState={showNewTask} onClickNewTask={() => setShowNewTask(!showNewTask)} />
-        {showNewTask && <NewTask setShowNewTask={setShowNewTask} getTasks={getTasks}/> }
-        <Tasks setTaskList={setTaskList} setFilteredTaskList={setFilteredTaskList} 
-          tagList={tagList} filteredTaskList={filteredTaskList} getTags={() => getTags()}
-          setTaggedTaskList={setTaggedTaskList}/>
-      </div>
+      {
+        (showEditUser)
+        && <EditUser 
+              currentUserId={currentUserId}
+              currentUsername={currentUsername}
+              setCurrentUsername={setCurrentUsername}
+              setShowEditUser={setShowEditUser}/>
+      }
     </div>
   );
 }

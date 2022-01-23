@@ -4,7 +4,7 @@ import EditTask from "./EditTask";
 import TagTask from "./TagTask";
 import Tag from "./Tag"
 
-function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTaskList, setTaskList, tagList, getTags}) {
+function Task({ currentUserId, index, task,  setFilteredTaskList, filteredTaskList, setTaggedTaskList, setTaskList, tagList, getUserTags}) {
   const [showEditTask, setShowEditTask] = useState(false)
   const [showTagTask, setShowTagTask] = useState(false)
 
@@ -17,14 +17,14 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
         setFilteredTaskList(newTaskList)
         setTaggedTaskList(newTaskList)
         refreshTasklist()
-        getTags()
+        getUserTags()
       })
       .catch((error) => console.log(error))
   }
 
   function refreshTasklist() {
     axios
-      .get(`/api/tasks`)
+      .get(`/api/${currentUserId}/tasks`)
       .then((res) => {
         setTaskList(res.data)
       })
@@ -37,7 +37,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
     setFilteredTaskList(newTaskList)
     setTaggedTaskList(newTaskList)
     refreshTasklist()
-    getTags()
+    getUserTags()
   }
 
   function refreshTaskStatus(newstatus) {
@@ -46,7 +46,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
     setFilteredTaskList(newTaskList)
     setTaggedTaskList(newTaskList)
     refreshTasklist()
-    getTags()
+    getUserTags()
   }
 
   function refreshTaskTags(newtag) {
@@ -55,7 +55,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
     setFilteredTaskList(newTaskList)
     setTaggedTaskList(newTaskList)
     refreshTasklist()
-    getTags()
+    getUserTags()
   }
 
   function refreshDeletedTaskTag(tagindex) {
@@ -64,7 +64,7 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
     setFilteredTaskList(newTaskList)
     setTaggedTaskList(newTaskList)
     refreshTasklist()
-    getTags()
+    getUserTags()
   }
 
   function deleteTask() {
@@ -107,11 +107,6 @@ function Task({ index, task,  setFilteredTaskList, filteredTaskList, setTaggedTa
   if (task.status == "done") {
     className += " Task-done"
   }
-  
-  let tagString=""
-  task.tags.map((tag) => {
-    tagString += "#" + tag.name + " "
-  })
 
   return (
     <div className={className}>

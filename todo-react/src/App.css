@@ -152,26 +152,32 @@
   display: inline-flex;
 }
 
-.Sidebar .Newtag {
+.Sidebar .Newtag, .Sidebar .Edittag {
   width: 40%;
 }
 
-.Sidebar .Newtag:hover {
-  color:grey;
-}
-
-.Sidebar .Edittag {
-  width: 40%;
-}
-
-.Sidebar .Edittag:hover {
-  color:grey;
+.Sidebar .Newtag:hover, .Sidebar .Edittag:hover {
+  font-weight: bold;
+  color:steelblue;
 }
 
 .Sidebar .NewtagInput {
   height: 25px;
   width: 80%;
   font-size: 25px;
+}
+
+.Sidebar .UserProfile {
+  cursor: pointer;
+}
+
+.Sidebar .UserProfile h2{
+  margin-block: 0px;
+  padding-block: 15px;
+}
+
+.Sidebar .UserProfile:hover {
+  background-color: steelblue;
 }
 
 .Tasks {
@@ -366,4 +372,88 @@
 .Users li:hover {
   color: var(--color2);
   font-weight: bold;
+}
+
+.Users .NewUserButton {
+  margin-top: 10px;
+  color: gray;
+}
+
+.Users .NewUserInput {
+  height: 25px;
+  width: 30ch;
+  background-color: var(--color3);
+  border-radius: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.Users .NewUserInput:focus {
+  outline: 1px solid grey;
+}
+
+.EditUser {
+  position: fixed;
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+  border: 3px solid black;
+  border-radius: 5px;
+  z-index: 2;
+  background: var(--color3);
+}
+
+.EditUser h3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 30px;
+}
+
+.EditUser .EditUserInput {
+  height: 25px;
+  width: 35ch;
+  background-color: var(--color4);
+  border-radius: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.EditUser .EditUserInput:focus {
+  outline: 1px solid grey;
+}
+
+.EditUser .SaveButton {
+  font-size: 22px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background-color: var(--color4);
+  vertical-align: bottom;
+}
+
+.EditUser .CloseButton {
+  position: fixed;
+  left: 72%;
+  top: 27%;
+  font-size: 25px;
+  border-radius: 5px;
+  background-color: var(--color4);
+}
+
+.EditUser div {
+  padding-top: 25px;
+}
+
+.EditUser .DeleteButton {
+  font-size: 22px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background-color: var(--color5);
+}
+
+.EditUser .SwitchButton {
+  font-size: 22px;
+  margin-left: 15px;
+  border-radius: 5px;
+  background-color: var(--color2);
 }

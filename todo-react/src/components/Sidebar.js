@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from "axios"
 
-function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList, currentUser }) {
+function Sidebar({ currentUserId, tagList, getUserTags, filterTasksByTag, resetTagFilter, taskList, currentUsername, setShowEditUser }) {
 
   const [showNewtag, setShowNewtag] = useState(false)
   const [showEdittag, setShowEdittag] = useState(false)
@@ -27,19 +27,19 @@ function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList,
       if (newtagName.length > 10) {
         alert('Please use tags with a maximum of 10 characters')
       } else {
-        postTag()
+        postTagUser()
       }
     }
   }
 
-  function postTag() {
+  function postTagUser() {
     axios
-      .post("/api/tags", {
+      .post(`/api/${currentUserId}/tags`, {
         name: newtagName
       })
       .then((res) => {
         setShowNewtag(false)
-        getTags()
+        getUserTags()
       })
       .catch((error) => console.log(error))
   }
@@ -48,7 +48,7 @@ function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList,
     axios
       .delete(`/api/tags/${id}`)
       .then((res) => {
-        getTags()
+        getUserTags()
       })
       .catch((error) => console.log(error))
   }
@@ -62,8 +62,10 @@ function Sidebar({ tagList, getTags, filterTasksByTag, resetTagFilter, taskList,
 
   return (
     <div className='Sidebar'>
-      <div className='userProfile'>
-        {currentUser !== null && <h2>{currentUser.username}</h2>}
+      <div 
+        className='UserProfile' 
+        onClick={() => setShowEditUser(true)}>
+        {<h2>{currentUsername}</h2>}
       </div>
       <div className={currentTag == -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
           resetTagFilter()
