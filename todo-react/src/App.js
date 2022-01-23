@@ -60,7 +60,9 @@ function App() {
   }
 
   function resetTagFilter() {
-    setFilteredTaskList(sortTasks('Current', taskList))
+    const resetList = sortTasks('Current', taskList);
+    setTaggedTaskList(resetList)
+    setFilteredTaskList(resetList)
   }
 
   function handleSearch(e) {
