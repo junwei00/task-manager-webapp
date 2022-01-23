@@ -1,5 +1,4 @@
 import Task from './Task'
-import { useState, useEffect } from 'react'
 
 function Tasks({ filteredTaskList, tagList, getUserTags, refreshTask, refreshDeletedTask }) {
   return (

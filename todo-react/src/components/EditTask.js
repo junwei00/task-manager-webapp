@@ -31,7 +31,7 @@ function EditTask({ task, refreshTaskNew, setShowEditTask }) {
   }
   
   function validateForm() {
-    if (title == '' || description == '' || deadline == '') {
+    if (title.length === 0) {
       setFormValid(false)
     } else {
       setFormValid(true)

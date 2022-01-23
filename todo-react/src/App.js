@@ -69,7 +69,7 @@ function App() {
     let searchTerm = e.target.value.toLowerCase()
     let result = []
     result = taggedTaskList.filter((task) =>
-      task.title.toLowerCase().search(searchTerm) != -1
+      task.title.toLowerCase().search(searchTerm) !== -1
     )
     setFilteredTaskList(result)
   }
@@ -85,24 +85,24 @@ function App() {
       setCurrentSort(sortBy)
     }
     let result = [...list]
-    if (sortBy == "Created") {
+    if (sortBy === "Created") {
       result.sort((task1, task2) => 
         {if (task1.created_at > task2.created_at) return -1
          if (task2.created_at > task1.created_at) return 1
          return 0})
-    } else if (sortBy == "Edited") {
+    } else if (sortBy === "Edited") {
       result.sort((task1, task2) => 
         {if (task1.updated_at > task2.updated_at) return -1
          if (task2.updated_at > task1.updated_at) return 1
          return 0})
-    } else if (sortBy == "Deadline") {
+    } else if (sortBy === "Deadline") {
       result.sort((task1, task2) => 
         {if (task1.deadline === null) return 1
          if (task2.deadline === null) return -1
          if (task1.deadline > task2.deadline) return 1
          if (task2.deadline > task1.deadline) return -1
          return 0})
-    } else if (sortBy == "Alphanumeric") {
+    } else if (sortBy === "Alphanumeric") {
       result.sort((task1, task2) => 
         task1.title.localeCompare(task2.title))
     } else {

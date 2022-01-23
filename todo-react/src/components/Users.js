@@ -37,26 +37,29 @@ function Users({ userList, setCurrentUserId, setCurrentUsername, getUsers }) {
     </input>
 
   return (
-    <div className='Users'>
-      <h3>Select user:</h3>
-      <div className='UserList'>
-        {
-          userList.map((user, index) => {
-            return (
-              <li 
-                key={index}
-                onClick={() => {
-                  setCurrentUserId(user.id)
-                  setCurrentUsername(user.username)}}>
-                {user.username}
-              </li>)})
-        }
+    <div>
+      <h1>Jun Wei's Todo App</h1>
+      <div className='Users'>
+        <h3>Select user:</h3>
+        <div className='UserList'>
+          {
+            userList.map((user, index) => {
+              return (
+                <li 
+                  key={index}
+                  onClick={() => {
+                    setCurrentUserId(user.id)
+                    setCurrentUsername(user.username)}}>
+                  {user.username}
+                </li>)})
+          }
+        </div>
+        <li className='NewUserButton' 
+            onClick={() => setShowNewUser(!showNewUser)}>
+          {showNewUser ? "Close" : "+ New User"}
+        </li>
+        {showNewUser && newUserInput}
       </div>
-      <li className='NewUserButton' 
-          onClick={() => setShowNewUser(!showNewUser)}>
-        {showNewUser ? "Close" : "+ New User"}
-      </li>
-      {showNewUser && newUserInput}
     </div>
   )
 }

@@ -34,7 +34,7 @@ function NewTask({ currentUserId, setShowNewTask, getUserTasks }) {
   }
 
   function validateForm() {
-    if (title == '') {
+    if (title.length === 0) {
       setFormValid(false)
     } else {
       setFormValid(true)

@@ -18,7 +18,7 @@ function Task({ task, tagList, getUserTags, refreshTaskNew, refreshDeletedTaskNe
   }
 
   function toggleFlagTask() {
-    let newstatus = (task.status == "flagged")
+    let newstatus = (task.status === "flagged")
                ? null
                : 'flagged'
     axios
@@ -30,7 +30,7 @@ function Task({ task, tagList, getUserTags, refreshTaskNew, refreshDeletedTaskNe
   }
 
   function toggleDoneTask() {
-    let newstatus = (task.status == "done")
+    let newstatus = (task.status === "done")
                ? null
                : 'done'
     axios
@@ -42,10 +42,10 @@ function Task({ task, tagList, getUserTags, refreshTaskNew, refreshDeletedTaskNe
   }
 
   let className="Task"
-  if (task.status == "flagged") {
+  if (task.status === "flagged") {
     className += " Task-flagged"
   }
-  if (task.status == "done") {
+  if (task.status === "done") {
     className += " Task-done"
   }
 
@@ -76,10 +76,10 @@ function Task({ task, tagList, getUserTags, refreshTaskNew, refreshDeletedTaskNe
       <p>{task.description}</p>
       <div className="Buttons">
         <button onClick = {toggleDoneTask}>
-          {task.status == 'done' ? 'Undo' : 'Done'}
+          {task.status === 'done' ? 'Undo' : 'Done'}
         </button>
         <button onClick = {toggleFlagTask}>
-          {task.status == 'flagged' ? 'Unflag' : 'Flag'}
+          {task.status === 'flagged' ? 'Unflag' : 'Flag'}
         </button>
         <button onClick = {() => setShowEditTask(!showEditTask)}>
         {showEditTask ? 'Close' : 'Edit'}

@@ -1,5 +1,3 @@
-import NewTask from "./NewTask";
-
 function Topbar({ handleSearch, handleSort, buttonState, onClickNewTask }) {
   return (
     <div className='Topbar'>

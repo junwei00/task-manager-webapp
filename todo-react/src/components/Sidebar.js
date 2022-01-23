@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import axios from "axios"
 
 function Sidebar({ 
@@ -69,7 +69,7 @@ function Sidebar({
         onClick={() => setShowEditUser(true)}>
         {<h2>{currentUsername}</h2>}
       </div>
-      <div className={currentTag == -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
+      <div className={currentTag === -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
           resetTagFilter()
           setCurrentTag(-1)
           }}>
@@ -82,7 +82,7 @@ function Sidebar({
       </div>
       {tagList.map((tag, index) => {
         let className="Tag"
-        if (tag.id == currentTag) {
+        if (tag.id === currentTag) {
           className+=" Tag-selected"
         } 
         if (showEdittag) {
