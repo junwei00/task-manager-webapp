@@ -1,7 +1,7 @@
 import axios from 'axios'
 import {useState} from 'react'
 
-function EditUser({ currentUserId, currentUsername, setShowEditUser, setCurrentUsername }) {
+function EditUser({ currentUserId, currentUsername, userList, setShowEditUser, setCurrentUsername }) {
   const [editedUsername, setEditedUsername] = useState(currentUsername)
 
   function deleteUser() {
@@ -16,14 +16,21 @@ function EditUser({ currentUserId, currentUsername, setShowEditUser, setCurrentU
   }
 
   function patchUser() {
-    axios
-      .put(`/api/users/${currentUserId}`, {
-        username: editedUsername
-      })
-      .then(
-        setCurrentUsername(editedUsername)
-      )
-      .catch((error) => console.log(error))
+    if (editedUsername.length > 30) {
+      alert('Please use names between 5 and 30 characters in length')
+    } else if (userList.find((user) => user.username === editedUsername) !== undefined) {
+      alert('Name has already been taken')
+    } else {
+      axios
+        .put(`/api/users/${currentUserId}`, {
+          username: editedUsername
+        })
+        .then(
+          setCurrentUsername(editedUsername),
+          setShowEditUser(false)
+        )
+        .catch((error) => console.log(error))
+    }
   }
 
   return (

@@ -7,9 +7,13 @@ function EditTask({ task, refreshTaskNew, setShowEditTask }) {
   const [deadline, setDeadline] = useState(task.deadline)
   const [formValid, setFormValid] = useState(false)
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    patchTask()
+  function handleSubmit (e) {
+    if (title.length > 50 || description.length > 500) {
+      alert('Please keep the title below 50 characters and the description below 500 characters')
+    } else {
+      e.preventDefault()
+      patchTask()
+    }
   }
 
   function patchTask() {

@@ -1,35 +1,41 @@
 import Task from './Task'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 function Tasks({ filteredTaskList, tagList, getUserTags, refreshTask, refreshDeletedTask }) {
+  const [showDoneTasks, setShowDoneTasks] = useState(false)
+
   return (
     <div className="Tasks">
-      {filteredTaskList.map((task, index) => {
-        if (task.status !== "done") {
+      {filteredTaskList
+        .filter((task) => {return task.status !== "done"}) 
+        .map(task => {
           return (
             <Task 
               key={task.id} 
-              index={index} 
               task={task} 
               tagList={tagList} 
               getUserTags={getUserTags}  
               refreshTaskNew={refreshTask}
               refreshDeletedTaskNew={refreshDeletedTask} />)
-        }
-      })}
-      {filteredTaskList.map((task, index) => {
-        if (task.status === "done") {
+        })
+      }
+      <button className='ShowDoneButton' onClick={() => setShowDoneTasks(!showDoneTasks)}>
+        {showDoneTasks ? "Hide Completed Tasks ▲" : "Show Completed Tasks ▼"}
+      </button>
+      {showDoneTasks && 
+        filteredTaskList
+        .filter((task) => {return task.status === "done"}) 
+        .map(task => {
           return (
-            <Task 
+            <Task
               key={task.id} 
-              index={index} 
               task={task} 
               tagList={tagList} 
               getUserTags={getUserTags}  
               refreshTaskNew={refreshTask}
               refreshDeletedTaskNew={refreshDeletedTask} />)
-        }
-    })}
+        })
+      }
     </div>
   );
 }

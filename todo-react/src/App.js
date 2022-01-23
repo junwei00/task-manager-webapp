@@ -50,8 +50,7 @@ function App() {
   }
 
   function filterTasksByTag(id) {
-    let result = []
-    result = taskList.filter((task) => {
+    let result = taskList.filter((task) => {
       let tags = task.tags.map((tag) => {return tag.id})
       return tags.includes(id)
     })
@@ -188,6 +187,7 @@ function App() {
         && <EditUser 
               currentUserId={currentUserId}
               currentUsername={currentUsername}
+              userList={userList}
               setCurrentUsername={setCurrentUsername}
               setShowEditUser={setShowEditUser}/>
       }

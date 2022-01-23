@@ -8,25 +8,12 @@ function NewTask({ currentUserId, setShowNewTask, getUserTasks }) {
   const [formValid, setFormValid] = useState(false)
 
   function handleSubmit (e) {
-    e.preventDefault()
-    postTaskUser()
-  }
-
-  function postTask() {
-    axios
-      .post("/api/tasks", {
-        title: title,
-        description: description,
-        deadline: deadline
-      })
-      .then((res) => {
-        setTitle('')
-        setDescription('')
-        setDeadline('')
-        setShowNewTask(false)
-        getUserTasks()
-      })
-      .catch((error) => console.log(error))
+    if (title.length > 50 || description.length > 500) {
+      alert('Please keep the title below 50 characters and the description below 500 characters')
+    } else {
+      e.preventDefault()
+      postTaskUser()
+    }
   }
 
   function postTaskUser() {
