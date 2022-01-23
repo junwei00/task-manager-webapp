@@ -62,33 +62,16 @@ function Sidebar({
       onChange={(e) => setNewtagName(e.target.value)}
     />
 
-  return (
-    <div className='Sidebar'>
-      <div 
-        className='UserProfile' 
-        onClick={() => setShowEditUser(true)}>
-        {<h2>{currentUsername}</h2>}
-      </div>
-      <div className={currentTag === -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
-          resetTagFilter()
-          setCurrentTag(-1)
-          }}>
-        <li>
-          All
-        </li>
-        <li className='Number'>
-          {taskList.length}
-        </li>
-      </div>
-      {tagList.map((tag, index) => {
-        let className="Tag"
-        if (tag.id === currentTag) {
-          className+=" Tag-selected"
-        } 
-        if (showEdittag) {
-          className="Tag-editing"
-        }
-        return (
+  const sidebarTags =
+    tagList.map((tag, index) => {
+      let className="Tag"
+      if (tag.id === currentTag) {
+        className+=" Tag-selected"
+      } 
+      if (showEdittag) {
+        className="Tag-editing"
+      }
+      return (
         <div key={index} className={className} onClick={() => {
           filterTasksByTag(tag.id)
           setCurrentTag(tag.id)
@@ -102,7 +85,30 @@ function Sidebar({
               </li> 
             : <li className="Number">{tag.tasks.length}</li>}
         </div>)
-      })}
+    })
+
+  const allTag =
+    <div className={currentTag === -1 ? "Tag Tag-selected" : "Tag"} onClick={() => {
+        resetTagFilter()
+        setCurrentTag(-1)
+        }}>
+      <li>
+        All
+      </li>
+      <li className='Number'>
+        {taskList.length}
+      </li>
+    </div>
+
+  return (
+    <div className='Sidebar'>
+      <div 
+        className='UserProfile' 
+        onClick={() => setShowEditUser(true)}>
+        {<h2>{currentUsername}</h2>}
+      </div>
+      {allTag}
+      {sidebarTags}
       <div className="NewEdit">
       <li className="Newtag" onClick={Newtag} >
         {showNewtag ? "Close" : "New"}
