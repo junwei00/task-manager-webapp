@@ -7,7 +7,6 @@ This is a submission for the NUS Computing for Voluntary Welfare Organisations (
 Name: Moo Jun Wei <br/>
 Matriculation Number: A0239015L
 
-A working demo of the application can be found at https://lucid-wescoff-daa7eb.netlify.app/. <br/>
 The user manual for this webapp can be found in this repository as User_Manual.pdf. <br />
 Mid and Final submission writeups can be found in this repository as MidWriteup.pdf and FinalWriteup.pdf.
 
