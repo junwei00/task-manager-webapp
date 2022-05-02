@@ -1,14 +1,8 @@
-# cvwo-todo-app
+# task-manager-webapp
 
 ## Information
 
-This is a submission for the NUS Computing for Voluntary Welfare Organisations (CVWO), AY21/22.
-
-Name: Moo Jun Wei <br/>
-Matriculation Number: A0239015L
-
 The user manual for this webapp can be found in this repository as User_Manual.pdf. <br />
-Mid and Final submission writeups can be found in this repository as MidWriteup.pdf and FinalWriteup.pdf.
 
 ## Overview
 
